@@ -29,11 +29,11 @@ const RightNav = ({ open }) => {
   return (
     <Ul open={open}>
       <li><Link to="/" className='text-decoration-none text-black m-4'>Home</Link></li>
-      <li><Link to="/prepare " className='text-decoration-none text-black m-4'>Community support</Link></li>
-      <li><Link to='/quiz' className='text-decoration-none text-black m-4'>Image classify</Link></li>
-      <li><Link to=' ' className='text-decoration-none text-black m-4'>Disaster Alerts</Link></li>
-      <li><Link to=' ' className='text-decoration-none text-black m-4'>Safety tips</Link></li>
-      <li><Link to=' ' className='text-decoration-none text-black m-4'>Donate the needy</Link></li>
+      <li><Link to="/Signup " className='text-decoration-none text-black m-4'>Community support</Link></li>
+      <li><Link to="/ImageClassifier" className='text-decoration-none text-black m-4'>Image classify</Link></li>
+      <li><Link to="/Notify" className='text-decoration-none text-black m-4'>Disaster Alerts</Link></li>
+      <li><Link to="/Safety" className='text-decoration-none text-black m-4'>Safety tips</Link></li>
+      <li><Link to="/Donation" className='text-decoration-none text-black m-4'>Donate the needy</Link></li>
      </Ul>
   )
 }
