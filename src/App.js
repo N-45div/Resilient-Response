@@ -9,6 +9,8 @@ import Signup from "./components/Signup";
 import DisasterClassifier from "./ImageClassifier";
 import Notification from "./Notify";
 import CommunitySupport from "./Home1";
+import SafetyTips from "./Safety";
+import Donation from "./Donation";
 
 function App() {
   const [messages, setMessages] = useState([]);
@@ -26,6 +28,8 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/ImageClassifier" element={<DisasterClassifier />} />
         <Route path="/Notify" element={<Notification />} />
+        <Route path="/Safety" element={<SafetyTips />} />
+        <Route path="/Donation" element={<Donation />} />
         <Route path="/Home1" element={<CommunitySupport messages={messages} addMessage={addMessage} />} />
       </Routes>
       <div className="message-container">
@@ -44,3 +48,4 @@ function App() {
 }
 
 export default App;
+
