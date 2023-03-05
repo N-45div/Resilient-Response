@@ -9,10 +9,14 @@ const RightNav = ({ open }) => {
         <Link to="/Signup" className='text-decoration-none text-black m-4'>Community support</Link>
         <Link to="/ImageClassifier" className='text-decoration-none text-black m-4'>Image classify</Link>
         <Link to="/Notify" className='text-decoration-none text-black m-4'>Disaster Alerts</Link>
+        <Link to="/Safety" className='text-decoration-none text-black m-4'>Safety tips</Link>
+        <Link to="/Donation" className='text-decoration-none text-black m-4'>Donate the needy</Link>
       </div>
     </>
   )
 }
 
 export default RightNav;
+
+
 
