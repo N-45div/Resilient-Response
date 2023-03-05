@@ -1,0 +1,32 @@
+.alert-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .alert-box {
+    background-color: #fff;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    width: calc(33.33% - 1rem);
+    min-width: 15rem;
+  }
+  
+  .alert-box:hover {
+    transform: translateY(-0.25rem);
+  }
+  
+  .alert-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .alert-coordinates {
+    margin-top: 0.5rem;
+  }
+  
