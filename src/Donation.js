@@ -3,9 +3,9 @@ import { Container, Row, Col, Card, Button, Form } from 'react-bootstrap';
 
 function Donation() {
   const [donationItems, setDonationItems] = useState([
-    { name: 'Food Gift Box : Which will include canned foods,chips,bread,milk etc', price: 10, quantity: 0 },
-    { name: 'Clothes Gift Box : Which will include all the necessary clothes for male and female', price: 20, quantity: 0 },
-    { name: 'Medical Help Gift Box : Which will include all the necessary medical items like bandage,emergency tablets etc', price: 30, quantity: 0 }
+    { name: 'Food Gift Box', price: 10, quantity: 0 },
+    { name: 'Clothes Gift Box', price: 20, quantity: 0 },
+    { name: 'Medical Help Gift Box', price: 30, quantity: 0 }
   ]);
 
   const [totalCost, setTotalCost] = useState(0);
