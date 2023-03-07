@@ -13,12 +13,13 @@ const RightNav = ({ open }) => {
 
           <Dropdown.Menu>
             <Dropdown.Item><Link to="/" className='text-decoration-none text-black'>Home</Link></Dropdown.Item>
-            <Dropdown.Item><Link to="/community" className='text-decoration-none text-black'>Community support</Link></Dropdown.Item>
-            <Dropdown.Item><Link to="/ImageClassifier" className='text-decoration-none text-black'>Image classify</Link></Dropdown.Item>
-            <Dropdown.Item><Link to="/Notify" className='text-decoration-none text-black'>Disaster Alerts</Link></Dropdown.Item>
-            <Dropdown.Item><Link to="/Safety" className='text-decoration-none text-black'>Safety tips</Link></Dropdown.Item>
-            <Dropdown.Item><Link to="/MarkerMap" className='text-decoration-none text-black'>Emergency shelters</Link></Dropdown.Item>
-            <Dropdown.Item><Link to="/Donation" className='text-decoration-none text-black'>Donate the needy</Link></Dropdown.Item>
+            <Dropdown.Item><Link to="/community" className='text-decoration-none text-black'>Disascomm Support</Link></Dropdown.Item>
+            <Dropdown.Item><Link to="/ImageClassifier" className='text-decoration-none text-black'>DisasImg</Link></Dropdown.Item>
+            <Dropdown.Item><Link to="/Notify" className='text-decoration-none text-black'>DisasNews</Link></Dropdown.Item>
+            <Dropdown.Item><Link to="/Safety" className='text-decoration-none text-black'>DisasSafe</Link></Dropdown.Item>
+            <Dropdown.Item><Link to="/MarkerMap" className='text-decoration-none text-black'>DisasShelter</Link></Dropdown.Item>
+            <Dropdown.Item><Link to="/Donation" className='text-decoration-none text-black'>DisasDonate</Link></Dropdown.Item>
+            <Dropdown.Item><Link to="/emer" className='text-decoration-none text-black'>DisasContact</Link></Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
       </div>
@@ -27,3 +28,4 @@ const RightNav = ({ open }) => {
 }
 
 export default RightNav;
+
