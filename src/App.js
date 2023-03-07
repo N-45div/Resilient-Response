@@ -11,6 +11,7 @@ import Notification from "./Notify";
 import CommunitySupport from "./community";
 import SafetyTips from "./Safety";
 import Donation from "./Donation";
+import MarkerMap from "./MarkerMap";
 
 function App() {
   const [messages, setMessages] = useState([]);
@@ -30,6 +31,7 @@ function App() {
         <Route path="/Notify" element={<Notification />} />
         <Route path="/Safety" element={<SafetyTips />} />
         <Route path="/Donation" element={<Donation />} />
+        <Route path="/MarkerMap" element={<MarkerMap />} />
         <Route path="/community" element={<CommunitySupport messages={messages} addMessage={addMessage} />} />
       </Routes>
       <div className="message-container">
