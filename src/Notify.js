@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import "./notify.css";
 
 function App() {
@@ -8,17 +7,16 @@ function App() {
   useEffect(() => {
     const fetchAlerts = async () => {
       try {
-        const response = await axios.get(
+        const response = await fetch(
           'https://gnews.io/api/v4/search?q=natural+disaster&token=0c62c18d5f6eabfdcd1621ecc39bbcde'
-
         );
-        const data = response.data.articles;
-        const newAlerts = data.map((article) => ({
+        const data = await response.json();
+        const newAlerts = data.articles.map((article) => ({
           id: article.publishedAt,
           title: article.title,
           description: article.description,
           url: article.url,
-          image: article.urlToImage,
+          image: article.image?.thumbnail?.contentUrl,
         }));
         setAlerts(newAlerts);
       } catch (error) {
@@ -52,7 +50,7 @@ function App() {
 
   return (
     <div>
-      <h1>Real-time Disaster News Alert Notifications</h1>
+      <h1 className="heading">Real-time Disaster News Alert Notifications</h1>
       <div className="alert-container">
         {alerts.map((alert) => (
           <div className="alert-box" key={alert.id} onClick={() => handleAlertClick(alert)}>
@@ -66,4 +64,5 @@ function App() {
 }
 
 export default App;
+
 
