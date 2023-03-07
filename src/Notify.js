@@ -1,20 +1,24 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import "./notify.css";
+
 function App() {
   const [alerts, setAlerts] = useState([]);
 
   useEffect(() => {
     const fetchAlerts = async () => {
       try {
-        const response = await fetch(
-          'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson'
+        const response = await axios.get(
+          'https://gnews.io/api/v4/search?q=natural+disaster&token=0c62c18d5f6eabfdcd1621ecc39bbcde'
+
         );
-        const data = await response.json();
-        const newAlerts = data.features.map((feature) => ({
-          id: feature.id,
-          title: feature.properties.title,
-          magnitude: feature.properties.mag,
-          coordinates: feature.geometry.coordinates,
+        const data = response.data.articles;
+        const newAlerts = data.map((article) => ({
+          id: article.publishedAt,
+          title: article.title,
+          description: article.description,
+          url: article.url,
+          image: article.urlToImage,
         }));
         setAlerts(newAlerts);
       } catch (error) {
@@ -29,32 +33,31 @@ function App() {
   useEffect(() => {
     if (alerts.length > 0) {
       const latestAlert = alerts[0];
-      const title = `Magnitude ${latestAlert.magnitude} earthquake alert`;
+      const title = `New disaster news alert: ${latestAlert.title}`;
       const options = {
-        body: latestAlert.title,
-        icon: '/path/to/icon.png',
+        body: latestAlert.description,
+        icon: latestAlert.image,
       };
       const notification = new Notification(title, options);
       notification.addEventListener('click', () => {
-        // Handle notification click event
+        window.open(latestAlert.url);
       });
       setTimeout(() => notification.close(), 5000); // Close notification after 5 seconds
     }
   }, [alerts]);
 
   const handleAlertClick = (alert) => {
-    // Handle alert click event
+    window.open(alert.url);
   };
 
   return (
     <div>
-      <h1>Real-time Disaster Alert Notifications</h1>
+      <h1>Real-time Disaster News Alert Notifications</h1>
       <div className="alert-container">
         {alerts.map((alert) => (
           <div className="alert-box" key={alert.id} onClick={() => handleAlertClick(alert)}>
             <h2>{alert.title}</h2>
-            <p>Magnitude: {alert.magnitude}</p>
-            <p>Coordinates: {alert.coordinates.join(', ')}</p>
+            <p>{alert.description}</p>
           </div>
         ))}
       </div>
@@ -63,3 +66,4 @@ function App() {
 }
 
 export default App;
+
