@@ -8,7 +8,8 @@ function App() {
     const fetchAlerts = async () => {
       try {
         const response = await fetch(
-          'https://gnews.io/api/v4/search?q=natural+disaster&token=0c62c18d5f6eabfdcd1621ecc39bbcde'
+          'https://newsapi.org/v2/top-headlines?q=natural%20disaster&language=en&apiKey=020f4dff9f3e4a86be5d43cc11dd5ed2'
+
         );
         const data = await response.json();
         const newAlerts = data.articles.map((article) => ({
