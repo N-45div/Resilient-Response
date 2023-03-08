@@ -1,0 +1,110 @@
+.posts {
+  overflow-y: auto;
+  height: calc(100vh - 100px);
+  scrollbar-width: thin;
+  scrollbar-color: #ccc #fff;
+}
+
+.posts::-webkit-scrollbar {
+  width: 6px;
+}
+
+.posts::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+.posts::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 3px;
+}
+.community-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.page-title {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.post-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.form-input {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  border: none;
+  box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.3);
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  border: none;
+  box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #0062cc;
+}
+
+.post-container {
+  width: 100%;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+}
+
+.post-message {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.post-image {
+  max-width: 100%;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .community-page {
+    padding: 2rem;
+  }
+
+  .post-container {
+    width: 50%;
+  }
+}
