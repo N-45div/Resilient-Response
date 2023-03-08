@@ -8,7 +8,7 @@ import Message from "./components/Message/Message";
 import Signup from "./components/Signup";
 import DisasterClassifier from "./ImageClassifier";
 import Notification from "./Notify";
-import CommunityPage from "./community";
+import CommunitySupport from "./community";
 import SafetyTips from "./Safety";
 import Donation from "./Donation";
 import MarkerMap from "./MarkerMap";
@@ -34,7 +34,7 @@ function App() {
         <Route path="/Donation" element={<Donation />} />
         <Route path="/MarkerMap" element={<MarkerMap />} />
         <Route path="/emer" element={<EmergencyContacts />} />
-        <Route path="/community" element={<CommunityPage messages={messages} addMessage={addMessage} />} />
+        <Route path="/community" element={<CommunitySupport messages={messages} addMessage={addMessage} />} />
       </Routes>
       <div className="message-container">
         {messages.map((message, index) => (
