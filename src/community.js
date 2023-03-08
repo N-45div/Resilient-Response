@@ -1,84 +1,28 @@
-import React, { useState } from "react";
-import {Form,Button} from "react-bootstrap";
-import AliceCarousel from "react-alice-carousel";
-import "react-alice-carousel/lib/alice-carousel.css";
+import React, { useState } from 'react';
+import { Container, Row, Col, Form, Button, Alert } from 'react-bootstrap';
 
-const CommunityPage = () => {
-  const [message, setMessage] = useState("");
-  const [image, setImage] = useState(null);
-  const [posts, setPosts] = useState([]);
+const CommunitySupport = () => {
+  const [message, setMessage] = useState('');
+  const [image, setImage] = useState('');
+  const [showMessage, setShowMessage] = useState(false);
+  const [messages, setMessages] = useState([]);
 
-  const handleSendMessage = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    const timestamp = new Date().toISOString();
-    const newPost = {
-      id: posts.length + 1,
-      content: message,
-      image: image,
-      timestamp: timestamp,
-      likes: 0,
-      shares: 0,
-    };
-    setPosts([newPost, ...posts]);
-    setMessage("");
-    setImage(null);
+    // Add new message to messages array
+    const newMessage = { message, image };
+    setMessages([...messages, newMessage]);
+    setMessage('');
+    setImage('');
+    setShowMessage(true);
   };
-
-  const handleImageChange = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.readAsDataURL(file);
-      reader.onload = () => {
-        const img = new Image();
-        img.src = reader.result;
-        img.onload = () => {
-          const canvas = document.createElement("canvas");
-          const ctx = canvas.getContext("2d");
-          let width = img.width;
-          let height = img.height;
-          const max = 250;
-          if (width > max) {
-            height *= max / width;
-            width = max;
-          }
-          if (height > max) {
-            width *= max / height;
-            height = max;
-          }
-          canvas.width = width;
-          canvas.height = height;
-          ctx.drawImage(img, 0, 0, width, height);
-          const dataURL = canvas.toDataURL();
-          setImage(dataURL);
-        };
-      };
-    }
-  };
-
-  const postItems = posts.map((post) => (
-    <div className="post" key={post.id}>
-      {post.image && (
-        <div className="post-image">
-          <img src={post.image} alt="Post" />
-        </div>
-      )}
-      <div className="post-details">
-        <div className="post-content">{post.content}</div>
-        <div className="post-timestamp">{post.timestamp}</div>
-      </div>
-      <div className="post-actions">
-        <button onClick={() => console.log("Like")}>Like</button>
-        <button onClick={() => console.log("Share")}>Share</button>
-      </div>
-    </div>
-  ));
 
   return (
-    <div className="community-page">
-      <h1>Community Page</h1>
-      <form className="post-form" onSubmit={handleSendMessage}>
-        <Form.Group controlId="message">
+    <Container>
+      <Row>
+        <Col>
+          <Form onSubmit={handleSubmit}>
+            <Form.Group controlId="message">
               <Form.Label>Message</Form.Label>
               <Form.Control
                 as="textarea"
@@ -92,27 +36,38 @@ const CommunityPage = () => {
               <Form.Control
                 type="file"
                 accept="image/*"
-                onChange={handleImageChange}
+                onChange={(e) => setImage(e.target.files[0])}
               />
             </Form.Group>
             <Button variant="primary" type="submit">
               Submit
             </Button>
-      </form>
-      <AliceCarousel
-        items={postItems}
-        responsive={{ 0: { items: 1 }, 1024: { items: 3 } }}
-        autoHeight
-        autoPlay
-        autoPlayInterval={3000}
-        infinite
-        disableButtonsControls
-        vertical
-        mouseTracking
-      />
-    </div>
+          </Form>
+        </Col>
+      </Row>
+      {showMessage && (
+        <Row>
+          <Col>
+            <div style={{ height: '400px', overflowY: 'scroll' }}>
+              {messages.map((msg, index) => (
+                <Alert key={index} variant="success" className="mt-3">
+                  <p>{msg.message}</p>
+                  {msg.image && (
+                    <img
+                      src={URL.createObjectURL(msg.image)}
+                      alt="User uploaded"
+                      style={{ maxWidth: '100%' }}
+                    />
+                  )}
+                </Alert>
+              ))}
+            </div>
+          </Col>
+        </Row>
+      )}
+    </Container>
   );
 };
 
-export default CommunityPage;
+export default CommunitySupport;
 
