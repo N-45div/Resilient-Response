@@ -1,73 +1,72 @@
-import React, { useState } from 'react';
-import { Container, Row, Col, Form, Button, Alert } from 'react-bootstrap';
+import React, { useState } from "react";
+import "./style.css";
 
-const CommunitySupport = () => {
-  const [message, setMessage] = useState('');
-  const [image, setImage] = useState('');
-  const [showMessage, setShowMessage] = useState(false);
-  const [messages, setMessages] = useState([]);
+function CommunityPage() {
+  const [message, setMessage] = useState("");
+  const [image, setImage] = useState("");
+  const [posts, setPosts] = useState([]);
+
+  const handleInput = (e) => {
+    setMessage(e.target.value);
+  };
+
+  const handleImage = (e) => {
+    setImage(URL.createObjectURL(e.target.files[0]));
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add new message to messages array
-    const newMessage = { message, image };
-    setMessages([...messages, newMessage]);
-    setMessage('');
-    setImage('');
-    setShowMessage(true);
+    const newPost = { message, image };
+    setPosts([newPost, ...posts]);
+    setMessage("");
+    setImage("");
   };
 
   return (
-    <Container>
-      <Row>
-        <Col>
-          <Form onSubmit={handleSubmit}>
-            <Form.Group controlId="message">
-              <Form.Label>Message</Form.Label>
-              <Form.Control
-                as="textarea"
-                rows={3}
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-              />
-            </Form.Group>
-            <Form.Group controlId="image">
-              <Form.Label>Image</Form.Label>
-              <Form.Control
-                type="file"
-                accept="image/*"
-                onChange={(e) => setImage(e.target.files[0])}
-              />
-            </Form.Group>
-            <Button variant="primary" type="submit">
-              Submit
-            </Button>
-          </Form>
-        </Col>
-      </Row>
-      {showMessage && (
-        <Row>
-          <Col>
-            <div style={{ height: '400px', overflowY: 'scroll' }}>
-              {messages.map((msg, index) => (
-                <Alert key={index} variant="success" className="mt-3">
-                  <p>{msg.message}</p>
-                  {msg.image && (
-                    <img
-                      src={URL.createObjectURL(msg.image)}
-                      alt="User uploaded"
-                      style={{ maxWidth: '100%' }}
-                    />
-                  )}
-                </Alert>
-              ))}
-            </div>
-          </Col>
-        </Row>
-      )}
-    </Container>
+    <div className="community-page">
+      <h1 className="page-title">Community Page</h1>
+      <form onSubmit={handleSubmit} className="post-form">
+        <div className="form-group">
+          <label htmlFor="message" className="form-label">
+            Message:
+          </label>
+          <textarea
+            id="message"
+            className="form-input"
+            placeholder="What's on your mind?"
+            value={message}
+            onChange={handleInput}
+            required
+          ></textarea>
+        </div>
+        <div className="form-group">
+          <label htmlFor="image" className="form-label">
+            Image:
+          </label>
+          <input
+            type="file"
+            id="image"
+            className="form-input"
+            accept="image/*"
+            onChange={handleImage}
+          />
+        </div>
+        <button type="submit" className="btn btn-primary">
+          Post
+        </button>
+      </form>
+      <div className="post-container">
+        {posts.map((post, index) => (
+          <div className="post" key={index}>
+            <p className="post-message">{post.message}</p>
+            {post.image && <img src={post.image} alt="Post Ig"  className="post-image" />}
+          </div>
+        ))}
+      </div>
+    </div>
   );
-};
+}
 
-export default CommunitySupport;
+export default CommunityPage;
+
 
