@@ -1,52 +1,115 @@
-import React, { Fragment } from 'react';
-import {
-  Container,
-  Row,
-  Col,
-  Card,
-  CardImg,
-  CardBody,
-  CardTitle,
-  CardText
-} from 'reactstrap';
-import PIC from './assets/26720.jpg';
-import BANNER from './assets/ban.jpg'; // import the banner image
+import React, { useState, useEffect } from 'react';
+import styled, { keyframes } from 'styled-components';
+import ban1 from './assets/26720.jpg';
+
+const Banner = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  margin-bottom: 2rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+`;
+
+const BannerContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+`;
+
+const BannerTitle = styled.h1`
+  font-size: 2rem;
+  font-weight: 700;
+  color:  #FFFFFF;
+  margin-bottom: 1rem;
+`;
+
+const BannerDescription = styled.p`
+  font-size: 1rem;
+  color:  #FFFFFF ;
+  margin-bottom: 1rem;
+`;
+
+const BannerButton = styled.a`
+  background-color: #4f46e5;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+
+  &:hover {
+    background-color: #4338ca;
+  }
+`;
+
+const upAndDown = keyframes`
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+`;
+
+const AnimatedImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: ${upAndDown} 3s ease infinite;
+`;
+
+const EarthyBackground = styled.div`
+  background-color: #0B3861;
+`;
 
 const Home = () => {
-  return (
-    <>
-      <Fragment>
-        <main className=" ">
-          <div
-            className="d-flex justify-content-center align-items-center"
-            style={{ backgroundImage: `url(${BANNER})`, backgroundSize: 'cover', height: '200px' }} // add banner image as background
-          >
-          </div>
-          <Container className="py-5">
-            <Row className="justify-content-center align-items-center">
-              <Col xs={12} md={6} className="mb-5 mb-md-0">
-                <Card>
-                  <CardBody>
-                    <CardTitle className="h3 mb-2 pt-2 font-weight-bold text-secondary">
-                      "Resilient-Response: Strengthening Communities to Withstand Natural Disasters"
-                    </CardTitle>
-                    <CardText className="text-secondary mb-4" style={{ fontSize: '0.75rem' }}>
-                    Resilient Response is a disaster management system that focuses on building resilient communities that are prepared to withstand and recover from natural disasters. Our approach is rooted in the belief that a community that is well-prepared and well-equipped can respond effectively to natural disasters and minimize the damage and loss of life.
+  const [typingIndex, setTypingIndex] = useState(0);
+  const typingSpeed = 10000; // in milliseconds
+  const typingStrings = [
+    'Resilient Response ',
+    'Strengthening Communities to Withstand Natural Disasters',
+  ];
 
-                    Through our system, we provide resources, training, and support to help communities build resilience and prepare for natural disasters. Our comprehensive approach includes safety tips, notifications, multi-language support, location information, emergency contact numbers, routes and shelter information, as well as resources and support mechanisms to help people cope with the aftermath of a natural disaster.
-                    </CardText>
-                  </CardBody>
-                </Card>
-              </Col>
-              <Col xs={12} md={6} className="text-center">
-                <CardImg top width="50%" height="80%" src={PIC} alt="banner" />
-              </Col>
-            </Row>
-          </Container>
-        </main>
-      </Fragment>
-    </>
+  useEffect(() => {
+    let interval = setInterval(() => {
+      setTypingIndex((prevIndex) => {
+        if (prevIndex === typingStrings.length - 1) {
+          return 0;
+        } else {
+          return prevIndex + 1;
+        }
+      });
+    }, typingSpeed);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
+  const typedString = typingStrings[typingIndex];
+
+  return (
+    <EarthyBackground>
+      <Banner>
+        <AnimatedImage src={ban1} alt="animated banner" />
+        <BannerContent>
+          <BannerTitle>{typedString}</BannerTitle>
+          <BannerDescription>
+            Resilient Response is a disaster management system that focuses on building resilient communities that are prepared to withstand and recover from natural disasters. Our approach is rooted in the belief that a community that is well-prepared and well-equipped can respond effectively to natural disasters and minimize the damage and loss of life.
+          </BannerDescription>
+          <BannerButton href="/">Follow us</BannerButton>
+        </BannerContent>
+      </Banner>
+    </EarthyBackground>
+
   );
 };
 
+
+
 export default Home;
+
