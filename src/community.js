@@ -1,71 +1,26 @@
-import React, { useState } from "react";
-import "./style.css";
+import { ChatEngine } from 'react-chat-engine';
 
-function CommunityPage() {
-  const [message, setMessage] = useState("");
-  const [image, setImage] = useState("");
-  const [posts, setPosts] = useState([]);
+//import ChatFeed from './components/ChatFeed';
+import LoginForm from './components/LoginForm';
 
-  const handleInput = (e) => {
-    setMessage(e.target.value);
-  };
+import './style.css';
 
-  const handleImage = (e) => {
-    setImage(URL.createObjectURL(e.target.files[0]));
-  };
+const projectID = '72d8d715-2e67-475d-8f2f-8b0929b92971';
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const newPost = { message, image };
-    setPosts([newPost, ...posts]);
-    setMessage("");
-    setImage("");
-  };
+const CommunityPage = () => {
+  if (!localStorage.getItem('username')) return <LoginForm />;
 
   return (
-    <div className="community-page">
-      <h1 className="page-title">Community Page</h1>
-      <form onSubmit={handleSubmit} className="post-form">
-        <div className="form-group">
-          <label htmlFor="message" className="form-label">
-            Message:
-          </label>
-          <textarea
-            id="message"
-            className="form-input"
-            placeholder="What's on your mind?"
-            value={message}
-            onChange={handleInput}
-            required
-          ></textarea>
-        </div>
-        <div className="form-group">
-          <label htmlFor="image" className="form-label">
-            Image:
-          </label>
-          <input
-            type="file"
-            id="image"
-            className="form-input"
-            accept="image/*"
-            onChange={handleImage}
-          />
-        </div>
-        <button type="submit" className="btn btn-primary">
-          Post
-        </button>
-      </form>
-      <div className="post-container">
-        {posts.map((post, index) => (
-          <div className="post" key={index}>
-            <p className="post-message">{post.message}</p>
-            {post.image && <img src={post.image} alt="Post Ig"  className="post-image" />}
-          </div>
-        ))}
-      </div>
-    </div>
+    <ChatEngine
+      height="100vh"
+      projectID={projectID}
+      userName={localStorage.getItem('username')}
+      userSecret={localStorage.getItem('password')}
+    />
   );
-}
+};
+
+// infinite scroll, logout, more customizations...
 
 export default CommunityPage;
 
