@@ -25,44 +25,47 @@ function Donation() {
   };
 
   return (
-    <Container className="my-5">
-      <h2>Introducing Gift Box Donation to the disaster torn needy</h2>
-      <Row xs={1} md={2} lg={3}>
-        {donationItems.map((item, index) => (
-          <Col key={index} className="mb-4">
-            <Card>
-              <Card.Body>
-                <Card.Title>{item.name}</Card.Title>
-                <Card.Text>${item.price}</Card.Text>
-                <Form>
-                  <Form.Group controlId={`quantity-${index}`}>
-                    <Form.Label>Quantity</Form.Label>
-                    <Form.Control type="number" min="0" value={item.quantity} onChange={(event) => handleQuantityChange(index, event)} />
-                  </Form.Group>
-                </Form>
-              </Card.Body>
-            </Card>
-          </Col>
-        ))}
-      </Row>
-      <hr />
-      <h3>Donation Summary : </h3>
-      <Row>
-        <Col>
+    <div style={{ background: '#F5F5F5', color: '#0B3861' }}>
+      <Container className="my-5">
+        <h2>Introducing Gift Box Donation to the disaster torn needy</h2>
+        <Row xs={1} md={2} lg={3}>
           {donationItems.map((item, index) => (
-            item.quantity > 0 && (
-              <p key={index}>{item.name}: {item.quantity} x ${item.price} = ${item.price * item.quantity}</p>
-            )
+            <Col key={index} className="mb-4">
+              <Card>
+                <Card.Body>
+                  <Card.Title>{item.name}</Card.Title>
+                  <Card.Text>${item.price}</Card.Text>
+                  <Form>
+                    <Form.Group controlId={`quantity-${index}`}>
+                      <Form.Label>Quantity</Form.Label>
+                      <Form.Control type="number" min="0" value={item.quantity} onChange={(event) => handleQuantityChange(index, event)} />
+                    </Form.Group>
+                  </Form>
+                </Card.Body>
+              </Card>
+            </Col>
           ))}
-        </Col>
-        <Col>
-          <h4>Total Cost</h4>
-          <p>${totalCost}</p>
-          <Button variant="primary" onClick={handleDonateNow}>Donate Now</Button>
-        </Col>
-      </Row>
-    </Container>
+        </Row>
+        <hr />
+        <h3>Donation Summary : </h3>
+        <Row>
+          <Col xs={12} md={6}>
+            {donationItems.map((item, index) => (
+              item.quantity > 0 && (
+                <p key={index}>{item.name}: {item.quantity} x ${item.price} = ${item.price * item.quantity}</p>
+              )
+            ))}
+          </Col>
+          <Col xs={12} md={6}>
+            <h4>Total Cost</h4>
+            <p>${totalCost}</p>
+            <Button variant="primary" onClick={handleDonateNow}>Donate Now</Button>
+          </Col>
+        </Row>
+      </Container>
+    </div>
   );
 }
 
 export default Donation;
+
