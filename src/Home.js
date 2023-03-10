@@ -10,7 +10,7 @@ const Banner = styled.div`
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto auto;
   }
 `;
 
@@ -24,14 +24,24 @@ const BannerContent = styled.div`
 const BannerTitle = styled.h1`
   font-size: 2rem;
   font-weight: 700;
-  color:  #FFFFFF;
+  color: #FFFFFF;
   margin-bottom: 1rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+    text-align: center;
+  }
 `;
 
 const BannerDescription = styled.p`
   font-size: 1rem;
-  color:  #FFFFFF ;
+  color: #FFFFFF;
   margin-bottom: 1rem;
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+    text-align: center;
+  }
 `;
 
 const BannerButton = styled.a`
@@ -47,12 +57,23 @@ const BannerButton = styled.a`
   &:hover {
     background-color: #4338ca;
   }
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+    text-align: center;
+  }
 `;
 
 const upAndDown = keyframes`
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 `;
 
 const AnimatedImage = styled.img`
