@@ -6,10 +6,10 @@ const FooterContainer = styled.footer`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f2f2f2;
+  background-color: #0B3861;
   padding: 20px;
   font-size: 14px;
-  color: #555;
+  color: #FFFFFF;
 `;
 
 const SocialLinks = styled.div`
@@ -18,11 +18,11 @@ const SocialLinks = styled.div`
 `;
 
 const SocialIconLink = styled.a`
-  color: #555;
+  color: #FFFFFF;
   margin-right: 10px;
 
   &:hover {
-    color: #333;
+    color: #CCCCCC;
   }
 `;
 
@@ -51,3 +51,4 @@ function Footer() {
 }
 
 export default Footer;
+
