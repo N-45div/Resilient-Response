@@ -1,5 +1,53 @@
 import React, { useState, useEffect } from 'react';
 import "./notify.css";
+import styled from 'styled-components';
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F5F5F5;
+  padding: 20px;
+  font-size: 16px;
+  color: #333;
+`;
+
+const Title = styled.h1`
+  font-size: 24px;
+  color: #0B3861;
+  margin-bottom: 30px;
+`;
+
+const AlertContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+`;
+
+const AlertBox = styled.div`
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  width: 350px;
+  margin: 10px;
+  padding: 20px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+`;
+
+const AlertTitle = styled.h2`
+  font-size: 18px;
+  color: #0B3861;
+`;
+
+const AlertDescription = styled.p`
+  margin-top: 10px;
+`;
+
 
 function App() {
   const [alerts, setAlerts] = useState([]);
@@ -49,21 +97,23 @@ function App() {
   };
 
   return (
-    <div>
-      <h1>Disaster News Alert Notifications</h1>
-      <div className="alert-container">
+    <Container>
+      <Title>Disaster News Alert Notifications</Title>
+      <AlertContainer>
         {alerts.map((alert) => (
-          <div className="alert-box" key={alert.id} onClick={() => handleAlertClick(alert)}>
-            <h2>{alert.title}</h2>
-            <p>{alert.description}</p>
-          </div>
+          <AlertBox key={alert.id} onClick={() => handleAlertClick(alert)}>
+            <AlertTitle>{alert.title}</AlertTitle>
+            <AlertDescription>{alert.description}</AlertDescription>
+          </AlertBox>
         ))}
-      </div>
-    </div>
+      </AlertContainer>
+    </Container>
   );
 }
 
 export default App;
+
+
 
 
 
