@@ -5,13 +5,17 @@ import RightNav from './RightNav';
 const Nav = styled.nav`
   width: 100%;
   height: 55px;
-  border-bottom: 2px solid #f1f1f1;
+  background-color: #0B3861;
+  color: #FFFFFF;
   padding: 0 20px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   .logo {
-    padding: 15px 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 10px;
   }
 `
 
@@ -19,7 +23,7 @@ const Navbar = () => {
   return (
     <Nav>
       <div className="logo">
-        <b>Resilient-Response</b>
+        Resilient-Response
       </div>
       <RightNav/>
     </Nav>
@@ -27,4 +31,5 @@ const Navbar = () => {
 }
 
 export default Navbar
+
 
