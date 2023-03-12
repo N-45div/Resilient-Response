@@ -56,7 +56,7 @@ function App() {
     const fetchAlerts = async () => {
       try {
         const response = await fetch(
-          'https://newsapi.org/v2/everything?q=natural%20disaster&apiKey=020f4dff9f3e4a86be5d43cc11dd5ed2'
+          'https://news.google.com/rss/search?q=natural%20disaster&hl=en-US&gl=US&ceid=US:en'
         );
         const data = await response.json();
         const newAlerts = data.articles.map((article) => ({
@@ -98,7 +98,7 @@ function App() {
 
   return (
     <Container>
-      <Title>Disaster News Alert Notifications</Title>
+      <Title>Disaster News</Title>
       <AlertContainer>
         {alerts.map((alert) => (
           <AlertBox key={alert.id} onClick={() => handleAlertClick(alert)}>
