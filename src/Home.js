@@ -91,7 +91,7 @@ const Home = () => {
   const [typingIndex, setTypingIndex] = useState(0);
   const typingSpeed = 10000; // in milliseconds
   const typingStrings = [
-    'Resilient Response ',
+    'Stronger together: resilient response',
     'Building strength in the face of crisis',
   ];
 
