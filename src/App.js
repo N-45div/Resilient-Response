@@ -6,7 +6,6 @@ import Footer from "./Footer";
 import Navbar from "./components/Nav/Navbar";
 import Message from "./components/Message/Message";
 import Signup from "./components/Signup";
-import DisasterClassifier from "./ImageClassifier";
 import Notification from "./Notify";
 import CommunityPage from "./community";
 import SafetyTips from "./Safety";
@@ -28,7 +27,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/ImageClassifier" element={<DisasterClassifier />} />
         <Route path="/Notify" element={<Notification />} />
         <Route path="/Safety" element={<SafetyTips />} />
         <Route path="/Donation" element={<Donation />} />
