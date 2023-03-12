@@ -4,46 +4,27 @@ import "./App.css";
 import Home from "./Home";
 import Footer from "./Footer";
 import Navbar from "./components/Nav/Navbar";
-import Message from "./components/Message/Message";
-import Signup from "./components/Signup";
 import Notification from "./Notify";
 import CommunityPage from "./community";
-import SafetyTips from "./Safety";
+import QRGenerator from "./Safety";
 import Donation from "./Donation";
 import MarkerMap from "./MarkerMap";
 import EmergencyContacts from "./emer";
 
 function App() {
-  const [messages, setMessages] = useState([]);
-
-  // Function to add a new message
-  const addMessage = (newMessage) => {
-    setMessages([...messages, newMessage]);
-  };
 
   return (
     <div className="App">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/signup" element={<Signup />} />
         <Route path="/Notify" element={<Notification />} />
-        <Route path="/Safety" element={<SafetyTips />} />
+        <Route path="/Safety" element={<QRGenerator />} />
         <Route path="/Donation" element={<Donation />} />
         <Route path="/MarkerMap" element={<MarkerMap />} />
         <Route path="/emer" element={<EmergencyContacts />} />
-        <Route path="/community" element={<CommunityPage messages={messages} addMessage={addMessage} />} />
+        <Route path="/community" element={<CommunityPage/>} />
       </Routes>
-      <div className="message-container">
-        {messages.map((message, index) => (
-          <Message
-            key={index}
-            name={message.name}
-            content={message.content}
-            isCurrentUser={message.isCurrentUser}
-          />
-        ))}
-      </div>
       <Footer/>
     </div>
   );
