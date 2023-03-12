@@ -1,6 +1,14 @@
-import React from 'react';
-import { FaHome, FaUsers, FaHotel, FaNewspaper, FaDonate, FaPhone, FaQrcode } from 'react-icons/fa';
-import styled from 'styled-components';
+import React from "react";
+import {
+  FaHome,
+  FaUsers,
+  FaHotel,
+  FaNewspaper,
+  FaDonate,
+  FaPhone,
+  FaQrcode,
+} from "react-icons/fa";
+import styled from "styled-components";
 
 const FooterContainer = styled.footer`
   position: fixed;
@@ -9,18 +17,17 @@ const FooterContainer = styled.footer`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #0B3861;
+  background-color: #0b3861;
   padding: 6px;
-  font-size: 14px;
-  color: #FFFFFF;
+  font-size: 35px;
+  color: #ffffff;
 
   @media only screen and (max-width: 768px) {
-    font-size: 12px;
+    font-size: 25px;
     flex-direction: column;
     justify-content: center;
   }
 `;
-
 
 const SocialLinks = styled.div`
   display: flex;
@@ -32,16 +39,16 @@ const SocialLinks = styled.div`
 `;
 
 const SocialIconLink = styled.a`
-  color: #FFFFFF;
+  color: #ffffff;
   margin-right: 20px;
 
   &:hover {
-    color: #CCCCCC;
+    color: #cccccc;
   }
 
   @media only screen and (max-width: 768px) {
-    margin-right: 10px;
-    font-size: 20px;
+    margin-right: 15px;
+    font-size: 35px;
   }
 `;
 
@@ -76,5 +83,3 @@ function Footer() {
 }
 
 export default Footer;
-
-
