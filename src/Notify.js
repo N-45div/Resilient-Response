@@ -7,15 +7,24 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   background-color: #F5F5F5;
-  padding: 20px;
-  font-size: 16px;
+  padding: 1.5rem;
+  font-size: 1rem;
   color: #333;
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
 `;
 
 const Title = styled.h1`
-  font-size: 24px;
+  font-size: 1.5rem;
   color: #0B3861;
-  margin-bottom: 30px;
+  margin-bottom: 1.5rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
 `;
 
 const AlertContainer = styled.div`
@@ -27,25 +36,30 @@ const AlertContainer = styled.div`
 const AlertBox = styled.div`
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
+  border-radius: 0.25rem;
   width: 350px;
-  margin: 10px;
-  padding: 20px;
+  margin: 0.5rem;
+  padding: 1rem;
   cursor: pointer;
   transition: box-shadow 0.3s ease-in-out;
 
   &:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   }
+
+  @media (max-width: 768px) {
+    width: calc(100% - 1rem);
+    margin: 0.5rem 0;
+  }
 `;
 
 const AlertTitle = styled.h2`
-  font-size: 18px;
+  font-size: 1.25rem;
   color: #0B3861;
 `;
 
 const AlertDescription = styled.p`
-  margin-top: 10px;
+  margin-top: 0.5rem;
 `;
 
 
