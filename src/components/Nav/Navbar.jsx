@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import RightNav from './RightNav';
+
 
 const Nav = styled.nav`
   width: 100%;
@@ -25,7 +25,6 @@ const Navbar = () => {
       <div className="logo">
         Resilient-Response
       </div>
-      <RightNav/>
     </Nav>
   )
 }
