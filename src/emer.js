@@ -22,7 +22,7 @@ const emergencyContacts = [
 const EmergencyContacts = () => {
   return (
     <Container fluid className="emergency-contacts-container py-5">
-      <h2 className="text-center mb-5">Emergency Contacts</h2>
+      <h2 className="text-center mb-5" style={{ color: 'blue' }}>Emergency Contacts</h2>
       <Row className="justify-content-center">
         {emergencyContacts.map(contact => (
           <Col xs={12} sm={6} md={4} key={contact.name} className="mb-4">
