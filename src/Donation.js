@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { Container, Row, Col, Card, Button, Form } from 'react-bootstrap';
 
+
 function Donation() {
   const [donationItems, setDonationItems] = useState([
-    { name: 'Food Gift Box', price: 10, quantity: 0 },
-    { name: 'Clothes Gift Box', price: 20, quantity: 0 },
-    { name: 'Medical Help Gift Box', price: 30, quantity: 0 }
+    { name: 'Food Gift Box', price: 5, quantity: 0 },
+    { name: 'Clothes Gift Box', price: 7, quantity: 0 }
   ]);
 
   const [totalCost, setTotalCost] = useState(0);
@@ -28,9 +28,9 @@ function Donation() {
     <div style={{ background: '#F5F5F5', color: '#0B3861' }}>
       <Container className="my-5">
         <h2>Introducing Gift Box Donation to the disaster torn needy</h2>
-        <Row xs={1} md={2} lg={3}>
+        <Row xs={1} sm={2} md={3} lg={3}>
           {donationItems.map((item, index) => (
-            <Col key={index} className="mb-4">
+            <Col key={index} className="mb-4" xs={12} sm={3} md={2}>
               <Card>
                 <Card.Body>
                   <Card.Title>{item.name}</Card.Title>
@@ -47,7 +47,7 @@ function Donation() {
           ))}
         </Row>
         <hr />
-        <h3>Donation Summary : </h3>
+        <h6>Donation Summary : </h6>
         <Row>
           <Col xs={12} md={6}>
             {donationItems.map((item, index) => (
@@ -68,4 +68,5 @@ function Donation() {
 }
 
 export default Donation;
+
 
