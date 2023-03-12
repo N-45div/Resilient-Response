@@ -91,8 +91,8 @@ const Home = () => {
   const [typingIndex, setTypingIndex] = useState(0);
   const typingSpeed = 10000; // in milliseconds
   const typingStrings = [
-    'Rise stronger, together : a resilient response to any challenge.',
-    'Resilience in action : Building strength in the face of crisis',
+    'Rise stronger, together : A resilient response to any challenge.',
+    'Rebuilding stronger, together: Building strength in the face of crisis',
   ];
 
   useEffect(() => {
