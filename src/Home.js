@@ -122,7 +122,6 @@ const Home = () => {
           <BannerDescription>
             Resilient Response is a disaster management system that focuses on building resilient communities that are prepared to withstand and recover from natural disasters. Our approach is rooted in the belief that a community that is well-prepared and well-equipped can respond effectively to natural disasters and minimize the damage and loss of life.
           </BannerDescription>
-          <BannerButton href="/">Follow us</BannerButton>
         </BannerContent>
       </Banner>
     </EarthyBackground>
