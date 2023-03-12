@@ -1,8 +1,11 @@
 import React from 'react';
-import { FaTwitter, FaFacebook, FaInstagram } from 'react-icons/fa';
+import { FaHome, FaUsers, FaHotel, FaNewspaper, FaDonate, FaPhone, FaBarcode } from 'react-icons/fa';
 import styled from 'styled-components';
 
 const FooterContainer = styled.footer`
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -10,40 +13,62 @@ const FooterContainer = styled.footer`
   padding: 20px;
   font-size: 14px;
   color: #FFFFFF;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 12px;
+    flex-direction: column;
+    justify-content: center;
+  }
 `;
+
 
 const SocialLinks = styled.div`
   display: flex;
   align-items: center;
+
+  @media only screen and (max-width: 768px) {
+    margin-top: 10px;
+  }
 `;
 
 const SocialIconLink = styled.a`
   color: #FFFFFF;
-  margin-right: 10px;
+  margin-right: 20px;
 
   &:hover {
     color: #CCCCCC;
   }
-`;
 
-const AppName = styled.p`
-  margin: 0;
-  font-weight: bold;
+  @media only screen and (max-width: 768px) {
+    margin-right: 10px;
+    font-size: 20px;
+  }
 `;
 
 function Footer() {
   return (
     <FooterContainer>
-      <AppName>Resilient Response</AppName>
       <SocialLinks>
-        <SocialIconLink href="https://twitter.com">
-          <FaTwitter />
+        <SocialIconLink href="/">
+          <FaHome />
         </SocialIconLink>
-        <SocialIconLink href="https://facebook.com">
-          <FaFacebook />
+        <SocialIconLink href="/community">
+          <FaUsers />
         </SocialIconLink>
-        <SocialIconLink href="https://instagram.com">
-          <FaInstagram />
+        <SocialIconLink href="/MarkerMap">
+          <FaHotel />
+        </SocialIconLink>
+        <SocialIconLink href="/Notify">
+          <FaNewspaper />
+        </SocialIconLink>
+        <SocialIconLink href="/Donation">
+          <FaDonate />
+        </SocialIconLink>
+        <SocialIconLink href="/emer">
+          <FaPhone />
+        </SocialIconLink>
+        <SocialIconLink href="/Safety">
+          <FaBarcode />
         </SocialIconLink>
       </SocialLinks>
     </FooterContainer>
@@ -51,4 +76,5 @@ function Footer() {
 }
 
 export default Footer;
+
 
