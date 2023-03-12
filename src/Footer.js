@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaHome, FaUsers, FaHotel, FaNewspaper, FaDonate, FaPhone, FaBarcode } from 'react-icons/fa';
+import { FaHome, FaUsers, FaHotel, FaNewspaper, FaDonate, FaPhone, FaQrcode } from 'react-icons/fa';
 import styled from 'styled-components';
 
 const FooterContainer = styled.footer`
@@ -68,7 +68,7 @@ function Footer() {
           <FaPhone />
         </SocialIconLink>
         <SocialIconLink href="/Safety">
-          <FaBarcode />
+          <FaQrcode />
         </SocialIconLink>
       </SocialLinks>
     </FooterContainer>
