@@ -1,9 +1,0 @@
- .safety-tips-page {
-  padding: 2rem;
-}
-
-@media (max-width: 768px) {
-  .safety-tips-card {
-    margin-bottom: 2rem;
-  }
-}
