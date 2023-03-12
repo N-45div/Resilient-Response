@@ -60,7 +60,7 @@ function QRGenerator() {
 
   return (
     <>
-      <Title>QR Code Generator and Reader</Title>
+      <Title>TrackRelief QR code</Title>
       <GeneratorContainer>
         <Form>
           <Form.Group controlId="qrValue">
