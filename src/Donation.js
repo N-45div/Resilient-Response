@@ -27,7 +27,7 @@ function Donation() {
   return (
     <div style={{ background: '#F5F5F5', color: '#0B3861' }}>
       <Container className="my-5">
-        <h2>Introducing Gift Box Donation to the disaster torn needy</h2>
+        <h2>Delivering hope through your gift: Disaster relief box.</h2>
         <Row xs={1} sm={2} md={3} lg={3}>
           {donationItems.map((item, index) => (
             <Col key={index} className="mb-4" xs={12} sm={3} md={2}>
