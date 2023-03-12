@@ -12,7 +12,7 @@ const CommunityPage = () => {
 
   return (
     <ChatEngine
-      height="80vh"
+      height="60vh"
       projectID={projectID}
       userName={localStorage.getItem('username')}
       userSecret={localStorage.getItem('password')}
