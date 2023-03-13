@@ -59,7 +59,7 @@ function Footer() {
         <SocialIconLink href="/Home">
           <FaHome />
         </SocialIconLink>
-        <SocialIconLink href="/GroupChat">
+        <SocialIconLink href="/community">
           <FaUsers />
         </SocialIconLink>
         <SocialIconLink href="/MarkerMap">
@@ -83,3 +83,4 @@ function Footer() {
 }
 
 export default Footer;
+
