@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { auth, provider } from "./config";
-import { signInWithPopup } from "firebase/auth";
+import React from "react";
 import styled from "styled-components";
-import { Button } from "bootstrap";
+import { useNavigate} from "react-router-dom";
+import { FaUserCircle, FaSignOutAlt } from "react-icons/fa";
 
 function Navbar() {
   const Nav = styled.nav`
@@ -20,53 +19,52 @@ function Navbar() {
       font-size: 1.2rem;
       padding: 10px;
     }
+
+    .user-info {
+      display: flex;
+      align-items: center;
+    }
+
+    .user-icon {
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: white;
+      margin-right: 10px;
+    }
+
+    .user-greeting {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: white;
+      text-transform: capitalize;
+    }
+
+    .logout-icon {
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: white;
+      margin-left: 10px;
+    }
   `;
 
-  const [value, setValue] = useState("");
-  const handleClick = () => {
-    signInWithPopup(auth, provider).then((data) => {
-      setValue(data.user.email);
-      localStorage.setItem("email", data.user.email);
-      localStorage.setItem("name", data.user.displayName);
-      console.log(data);
-    });
-  };
-  useEffect(() => {
-    setValue(localStorage.getItem("email"));
-  });
+  const navigate = useNavigate();
 
   const logout = () => {
     localStorage.clear();
-    window.location.reload();
+    navigate("/");
   };
 
   return (
     <Nav>
       <div className="logo">Resilient-Response</div>
-
-      {/* used to display name of logged in user  */}
-      {value ? <p> HI, {localStorage.getItem("name")}</p> : <></>}
-
-      {/* used to display login/logout button  */}
-      {value ? (
-        <button
-          className="btn btn-primary"
-          style={{ color: "white" }}
-          onClick={logout}
-        >
-          LogOut
-        </button>
-      ) : (
-        <button
-          className="btn btn-primary"
-          style={{ color: "white" }}
-          onClick={handleClick}
-        >
-          LogIn
-        </button>
-      )}
+      <div className="user-info">
+        <span className="user-icon"><FaUserCircle /></span>
+        <span className="user-greeting">Hi, {localStorage.getItem("name")}</span>
+        <span className="logout-icon" onClick={logout}><FaSignOutAlt /></span>
+      </div>
     </Nav>
   );
 }
 
 export default Navbar;
+
