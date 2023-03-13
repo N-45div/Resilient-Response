@@ -1,7 +1,7 @@
 import { ChatEngine } from 'react-chat-engine';
-
-//import ChatFeed from './components/ChatFeed';
 import LoginForm from './components/LoginForm';
+import Navbar from './components/Nav/Navbar';
+import Footer from './Footer';
 
 import './style.css';
 
@@ -11,17 +11,23 @@ const CommunityPage = () => {
   if (!localStorage.getItem('username')) return <LoginForm />;
 
   return (
+    <div className="App">
+      <Navbar/>
     <ChatEngine
-      height="73vh"
+      height="75vh"
       projectID={projectID}
       userName={localStorage.getItem('username')}
       userSecret={localStorage.getItem('password')}
     />
+    <Footer/>
+    </div>
   );
 };
 
-// infinite scroll, logout, more customizations...
 
 export default CommunityPage;
+
+
+
 
 
