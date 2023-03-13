@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { Container, Row, Col, Card, Button, Form } from 'react-bootstrap';
+import Navbar from './components/Nav/Navbar';
+import Footer from './Footer';
 
 
 function Donation() {
@@ -26,6 +28,7 @@ function Donation() {
 
   return (
     <div style={{ background: '#F5F5F5', color: '#0B3861' }}>
+      <Navbar/>
       <Container className="my-5">
         <h2>Delivering hope through your gift: Disaster relief box.</h2>
         <Row xs={1} sm={2} md={3} lg={3}>
@@ -63,10 +66,14 @@ function Donation() {
           </Col>
         </Row>
       </Container>
+      <Footer/>
     </div>
   );
 }
 
 export default Donation;
+
+
+
 
 
