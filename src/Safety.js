@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Button, Form } from 'react-bootstrap';
 import QRCode from 'qrcode.react';
+import Navbar from './components/Nav/Navbar';
+import Footer from './Footer';
 
 
 const GeneratorContainer = styled.div`
@@ -59,6 +61,8 @@ function QRGenerator() {
 
 
   return (
+    <div className="App">
+      <Navbar/>
     <>
       <Title>TrackRelief QR code</Title>
       <GeneratorContainer>
@@ -74,8 +78,12 @@ function QRGenerator() {
         </QRCodeContainer>
       </GeneratorContainer>
     </>
+    <Footer/>
+    </div>
  );
 }
 
 export default QRGenerator;
+
+
 
