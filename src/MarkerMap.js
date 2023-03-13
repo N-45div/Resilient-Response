@@ -7,6 +7,8 @@ import "leaflet/dist/leaflet.css";
 import osm from "./osm-providers";
 
 import cities from "./cities.json";
+import Navbar from "./components/Nav/Navbar";
+import Footer from "./Footer";
 
 const markerIcon = new L.Icon({
   iconUrl: require("./assets/marker.png"),
@@ -21,6 +23,8 @@ const MarkersMap = () => {
   const mapRef = useRef();
 
   return (
+    <div className="App">
+      <Navbar/>
     <>
       <div className="row mb-3">
         <div className="col text-center">
@@ -51,7 +55,10 @@ const MarkersMap = () => {
         </div>
       </div>
     </>
+    <Footer/>
+    </div>
   );
 };
 
 export default MarkersMap;
+
