@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
 import ban1 from './assets/26720.jpg';
+import Navbar from './components/Nav/Navbar';
+import Footer from './Footer';
 
 const Banner = styled.div`
   display: grid;
@@ -114,6 +116,8 @@ const Home = () => {
   const typedString = typingStrings[typingIndex];
 
   return (
+    <div className="App">
+    <Navbar/>
     <EarthyBackground>
       <Banner>
         <AnimatedImage src={ban1} alt="animated banner" />
@@ -125,6 +129,8 @@ const Home = () => {
         </BannerContent>
       </Banner>
     </EarthyBackground>
+    <Footer/>
+    </div>
 
   );
 };
@@ -132,5 +138,8 @@ const Home = () => {
 
 
 export default Home;
+
+
+
 
 
