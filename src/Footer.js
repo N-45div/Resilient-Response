@@ -59,7 +59,7 @@ function Footer() {
         <SocialIconLink href="/Home">
           <FaHome />
         </SocialIconLink>
-        <SocialIconLink href="/community">
+        <SocialIconLink href="/GroupChat">
           <FaUsers />
         </SocialIconLink>
         <SocialIconLink href="/MarkerMap">
