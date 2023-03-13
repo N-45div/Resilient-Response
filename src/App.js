@@ -10,9 +10,9 @@ import QRGenerator from "./Safety";
 import Donation from "./Donation";
 import MarkerMap from "./MarkerMap";
 import EmergencyContacts from "./emer";
+import SignIn from "./components/Nav/SignIn";
 
 function App() {
-
   return (
     <div className="App">
       <Navbar />
@@ -23,12 +23,12 @@ function App() {
         <Route path="/Donation" element={<Donation />} />
         <Route path="/MarkerMap" element={<MarkerMap />} />
         <Route path="/emer" element={<EmergencyContacts />} />
-        <Route path="/community" element={<CommunityPage/>} />
+        <Route path="/community" element={<CommunityPage />} />
+        <Route path="/SignIn" element={<SignIn />} />
       </Routes>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
 
 export default App;
-

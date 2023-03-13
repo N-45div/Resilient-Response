@@ -3,8 +3,6 @@ import { TileLayer, Marker, Popup } from "react-leaflet";
 import { MapContainer as Map } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
-//import { Container, Row, Col, Image } from "react-bootstrap";
-//import "./SafetyTips.css";
 
 import osm from "./osm-providers";
 
@@ -24,7 +22,7 @@ const MarkersMap = () => {
 
   return (
     <>
-      <div className="row">
+      <div className="row mb-3">
         <div className="col text-center">
           <h2>Emergency Shelters for People Safety</h2>
           <p>Nearest Disaster Shelters in case of Emergency</p>
