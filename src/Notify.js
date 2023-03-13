@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import "./notify.css";
 import styled from 'styled-components';
+import Navbar from './components/Nav/Navbar';
+import Footer from './Footer';
 
 const Container = styled.div`
   display: flex;
@@ -111,6 +113,8 @@ function App() {
   };
 
   return (
+    <div className="App">
+    <Navbar/>
     <Container>
       <Title>Disaster News</Title>
       <AlertContainer>
@@ -122,10 +126,18 @@ function App() {
         ))}
       </AlertContainer>
     </Container>
+    <Footer/>
+    </div>
   );
 }
 
 export default App;
+
+
+
+
+
+
 
 
 
