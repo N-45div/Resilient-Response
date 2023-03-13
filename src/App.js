@@ -9,6 +9,7 @@ import MarkerMap from "./MarkerMap";
 import EmergencyContacts from "./emer";
 import SignIn from "./components/Nav/SignIn";
 import HomePage from "./openpg";
+import GroupChat from "./GroupChat";
 
 function App() {
   return (
@@ -23,10 +24,10 @@ function App() {
         <Route path="/emer" element={<EmergencyContacts />} />
         <Route path="/community" element={<CommunityPage />} />
         <Route path="/SignIn" element={<SignIn />} />
+        <Route path="/GroupChat" element={<GroupChat />} />
       </Routes>
     </div>
   );
 }
 
 export default App;
-
