@@ -1,5 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import Navbar from './components/Nav/Navbar';
+import Footer from './Footer';
 
 const emergencyContacts = [
   { name: 'Police', number: '911' },
@@ -21,6 +23,8 @@ const emergencyContacts = [
 
 const EmergencyContacts = () => {
   return (
+    <div className="App">
+      <Navbar/>
     <Container fluid className="emergency-contacts-container py-5">
       <h2 className="text-center mb-5" style={{ color: 'blue' }}>Emergency Contacts</h2>
       <Row className="justify-content-center">
@@ -37,8 +41,12 @@ const EmergencyContacts = () => {
         ))}
       </Row>
     </Container>
+    <Footer/>
+    </div>
   );
 };
 
 export default EmergencyContacts;
+
+
 
