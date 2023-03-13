@@ -30,10 +30,10 @@ function Donation() {
     <div style={{ background: '#F5F5F5', color: '#0B3861' }}>
       <Navbar/>
       <Container className="my-5">
-        <h2>Delivering hope through your gift: Disaster relief box.</h2>
+        <h2 className="text-center mb-4">Delivering hope through your gift: Disaster relief box.</h2>
         <Row xs={1} sm={2} md={3} lg={3}>
           {donationItems.map((item, index) => (
-            <Col key={index} className="mb-4" xs={12} sm={3} md={2}>
+            <Col key={index} className="mb-4" xs={12} md={6} lg={4}>
               <Card>
                 <Card.Body>
                   <Card.Title>{item.name}</Card.Title>
@@ -59,9 +59,9 @@ function Donation() {
               )
             ))}
           </Col>
-          <Col xs={12} md={6}>
+          <Col xs={12} md={6} className="text-center">
             <h4>Total Cost</h4>
-            <p>${totalCost}</p>
+            <p className="fs-4">${totalCost}</p>
             <Button variant="primary" onClick={handleDonateNow}>Donate Now</Button>
           </Col>
         </Row>
@@ -72,6 +72,7 @@ function Donation() {
 }
 
 export default Donation;
+
 
 
 
