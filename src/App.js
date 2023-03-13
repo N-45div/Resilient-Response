@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./Home";
 import Notification from "./Notify";
-import CommunityPage from "./community";
+
 import QRGenerator from "./Safety";
 import Donation from "./Donation";
 import MarkerMap from "./MarkerMap";
@@ -22,7 +22,6 @@ function App() {
         <Route path="/Donation" element={<Donation />} />
         <Route path="/MarkerMap" element={<MarkerMap />} />
         <Route path="/emer" element={<EmergencyContacts />} />
-        <Route path="/community" element={<CommunityPage />} />
         <Route path="/SignIn" element={<SignIn />} />
         <Route path="/GroupChat" element={<GroupChat />} />
       </Routes>
