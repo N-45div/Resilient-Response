@@ -56,7 +56,7 @@ function Footer() {
   return (
     <FooterContainer>
       <SocialLinks>
-        <SocialIconLink href="/">
+        <SocialIconLink href="/Home">
           <FaHome />
         </SocialIconLink>
         <SocialIconLink href="/community">
