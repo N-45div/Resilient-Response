@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { auth, provider } from "./config";
 import { signInWithPopup } from "firebase/auth";
 import styled from "styled-components";
+import { Button } from "bootstrap";
 
 function Navbar() {
   const Nav = styled.nav`
@@ -41,9 +42,21 @@ function Navbar() {
     <Nav>
       <div className="logo">Resilient-Response</div>
       {value ? (
-        <button onClick={logout}> LogOut</button>
+        <button
+          className="btn btn-primary"
+          style={{ color: "white" }}
+          onClick={logout}
+        >
+          LogOut
+        </button>
       ) : (
-        <button onClick={handleClick}> LogIn</button>
+        <button
+          className="btn btn-primary"
+          style={{ color: "white" }}
+          onClick={handleClick}
+        >
+          LogIn
+        </button>
       )}
     </Nav>
   );
