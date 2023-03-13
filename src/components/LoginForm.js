@@ -1,4 +1,7 @@
 import { useState } from 'react';
+import Footer from '../Footer';
+import Navbar from './Nav/Navbar';
+
 
 const projectID = '72d8d715-2e67-475d-8f2f-8b0929b92971';
 
@@ -34,6 +37,8 @@ const LoginForm = () => {
   };
 
   return (
+    <div className="App">
+      <Navbar/>
     <div className="wrapper">
       <div className="form">
         <h1 className="title">Welcome to our Communtiy</h1>
@@ -49,8 +54,10 @@ const LoginForm = () => {
         <h1>{error}</h1>
       </div>
     </div>
-
+    <Footer/>
+    </div>
   );
 };
 
 export default LoginForm;
+
