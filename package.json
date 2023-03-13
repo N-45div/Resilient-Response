@@ -21,7 +21,6 @@
     "react-bootstrap": "^2.7.2",
     "react-chat-engine": "^1.11.28",
     "react-dom": "^18.2.0",
-    "react-firebase-hooks": "^5.1.1",
     "react-icons": "^4.8.0",
     "react-leaflet": "^4.2.1",
     "react-router-dom": "^6.8.2",
@@ -61,3 +60,5 @@
     "style-loader": "^3.3.1"
   }
 }
+
+
