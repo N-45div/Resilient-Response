@@ -27,6 +27,8 @@ function Navbar() {
     signInWithPopup(auth, provider).then((data) => {
       setValue(data.user.email);
       localStorage.setItem("email", data.user.email);
+      localStorage.setItem("name", data.user.displayName);
+      console.log(data);
     });
   };
   useEffect(() => {
@@ -41,6 +43,11 @@ function Navbar() {
   return (
     <Nav>
       <div className="logo">Resilient-Response</div>
+
+      {/* used to display name of logged in user  */}
+      {value ? <p> HI, {localStorage.getItem("name")}</p> : <></>}
+
+      {/* used to display login/logout button  */}
       {value ? (
         <button
           className="btn btn-primary"
