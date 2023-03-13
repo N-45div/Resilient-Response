@@ -1,0 +1,16 @@
+.bg-dark-blue {
+    background-color: #0B3861;
+    color: #ffffff;
+  }
+  
+  .btn-grey {
+    background-color: #d1d1d1;
+    color: #ffffff;
+    border: none;
+  }
+  
+  .btn-grey:hover {
+    background-color: #a1a1a1;
+    color: #ffffff;
+  }
+  
