@@ -25,40 +25,40 @@ const MarkersMap = () => {
   return (
     <div className="App">
       <Navbar/>
-    <>
-      <div className="row mb-3">
-        <div className="col text-center">
-          <h2>Emergency Shelters for People Safety</h2>
-          <p>Nearest Disaster Shelters in case of Emergency</p>
-          <div className="col">
-            <Map center={center} zoom={ZOOM_LEVEL} ref={mapRef}>
-              <TileLayer
-                url={osm.maptiler.url}
-                attribution={osm.maptiler.attribution}
-              />
+      <>
+        <div className="row mb-3">
+          <div className="col text-center">
+            <h1 style={{ color: "#1a2a6c" }}>Disaster Gift Box Donation</h1>
+            <p style={{ color: "#1a2a6c" }}>Nearest Disaster Shelters in case of Emergency</p>
+            <div className="col">
+              <Map center={center} zoom={ZOOM_LEVEL} ref={mapRef} style={{ height: "70vh" }}>
+                <TileLayer
+                  url={osm.maptiler.url}
+                  attribution={osm.maptiler.attribution}
+                />
 
-              {cities.map((city, idx) => (
-                <Marker
-                  position={[city.lat, city.lng]}
-                  icon={markerIcon}
-                  key={idx}
-                >
-                  <Popup>
-                    <b>
-                      {city.city}, {city.country}
-                    </b>
-                  </Popup>
-                </Marker>
-              ))}
-            </Map>
+                {cities.map((city, idx) => (
+                  <Marker
+                    position={[city.lat, city.lng]}
+                    icon={markerIcon}
+                    key={idx}
+                  >
+                    <Popup>
+                      <b>
+                        {city.city}, {city.country}
+                      </b>
+                    </Popup>
+                  </Marker>
+                ))}
+              </Map>
+            </div>
           </div>
         </div>
-      </div>
-    </>
+      </>
+
     <Footer/>
     </div>
   );
 };
 
 export default MarkersMap;
-
