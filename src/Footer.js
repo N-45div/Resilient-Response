@@ -3,10 +3,9 @@ import {
   FaHome,
   FaUsers,
   FaHotel,
-  FaNewspaper,
   FaDonate,
   FaPhone,
-  FaQrcode,
+  FaHandPaper
 } from "react-icons/fa";
 import styled from "styled-components";
 
@@ -18,7 +17,7 @@ const FooterContainer = styled.footer`
   justify-content: space-between;
   align-items: center;
   background-color: #0b3861;
-  padding: 6px;
+  padding: 0px;
   font-size: 35px;
   color: #ffffff;
 
@@ -65,17 +64,14 @@ function Footer() {
         <SocialIconLink href="/MarkerMap">
           <FaHotel />
         </SocialIconLink>
-        <SocialIconLink href="/Notify">
-          <FaNewspaper />
-        </SocialIconLink>
         <SocialIconLink href="/Donation">
           <FaDonate />
         </SocialIconLink>
         <SocialIconLink href="/emer">
           <FaPhone />
         </SocialIconLink>
-        <SocialIconLink href="/Safety">
-          <FaQrcode />
+        <SocialIconLink href="/Notify">
+          <FaHandPaper />
         </SocialIconLink>
       </SocialLinks>
     </FooterContainer>
@@ -83,4 +79,3 @@ function Footer() {
 }
 
 export default Footer;
-
