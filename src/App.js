@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./Home";
-import Notification from "./weath";
+import App1 from "./Notify";
 import CommunityPage from "./community";
 import QRGenerator from "./Safety";
 import Donation from "./Donation";
@@ -17,7 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/Home" element={<Home />} />
-        <Route path="/Notify" element={<Notification />} />
+        <Route path="/Notify" element={<App1 />} />
         <Route path="/Safety" element={<QRGenerator />} />
         <Route path="/Donation" element={<Donation />} />
         <Route path="/MarkerMap" element={<MarkerMap />} />
