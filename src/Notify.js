@@ -7,7 +7,7 @@ import { drawHand } from "./utilities";
 import Navbar from "./components/Nav/Navbar";
 import Footer from "./Footer";
 
-function App() {
+function App1() {
   const [cameraFacingMode, setCameraFacingMode] = useState("user"); // "user" is front camera, "environment" is back camera
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
@@ -118,4 +118,4 @@ function App() {
   );
 }
 
-export default App
+export default App1
