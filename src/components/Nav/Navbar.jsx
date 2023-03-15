@@ -56,10 +56,8 @@ function Navbar() {
 
   return (
     <Nav>
-      <div className="logo">Resilient-Response</div>
+      <span className="user-greeting">Hi, {localStorage.getItem("name")}</span>
       <div className="user-info">
-        <span className="user-icon"><FaUserCircle /></span>
-        <span className="user-greeting">Hi, {localStorage.getItem("name")}</span>
         <span className="logout-icon" onClick={logout}><FaSignOutAlt /></span>
       </div>
     </Nav>
