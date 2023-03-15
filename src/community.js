@@ -15,7 +15,7 @@ const CommunityPage = () => {
     <div className="App">
       <Navbar/>
     <ChatEngine
-      height="78vh"
+      height="80vh"
       projectID={projectID}
       userName={localStorage.getItem('username')}
       userSecret={localStorage.getItem('password')}
@@ -25,7 +25,6 @@ const CommunityPage = () => {
   );
 };
 
-// infinite scroll, logout, more customizations...
 
 export default CommunityPage;
 
