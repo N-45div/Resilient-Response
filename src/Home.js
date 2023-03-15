@@ -93,8 +93,8 @@ const Home = () => {
   const [typingIndex, setTypingIndex] = useState(0);
   const typingSpeed = 10000; // in milliseconds
   const typingStrings = [
-    'Rise stronger, together : A resilient response to any challenge.',
-    'Rebuilding stronger, together: Building strength in the face of crisis',
+    'A resilient response is the key to thriving. By embracing change, learning from challenges, and innovating in the midst of uncertainty.',
+    'With courage, determination, and a commitment to positive action, we can weather any storm and emerge more resilient than ever before.',
   ];
 
   useEffect(() => {
