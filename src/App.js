@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./Home";
-import Notification from "./Notify";
+import Notification from "./weath";
 import CommunityPage from "./community";
 import QRGenerator from "./Safety";
 import Donation from "./Donation";
@@ -9,6 +9,7 @@ import MarkerMap from "./MarkerMap";
 import EmergencyContacts from "./emer";
 import SignIn from "./components/Nav/SignIn";
 import HomePage from "./openpg";
+import WeatherApp from "./weath";
 
 function App() {
   return (
@@ -23,10 +24,10 @@ function App() {
         <Route path="/emer" element={<EmergencyContacts />} />
         <Route path="/community" element={<CommunityPage />} />
         <Route path="/SignIn" element={<SignIn />} />
+        <Route path="/weath" element={<WeatherApp/>} />
       </Routes>
     </div>
   );
 }
 
 export default App;
-
