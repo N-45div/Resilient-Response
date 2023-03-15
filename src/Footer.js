@@ -18,7 +18,7 @@ const FooterContainer = styled.footer`
   justify-content: space-between;
   align-items: center;
   background-color: #0b3861;
-  padding: 0px;
+  padding: 2px;
   font-size: 35px;
   color: #ffffff;
 
