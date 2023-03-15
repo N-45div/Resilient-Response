@@ -5,7 +5,8 @@ import {
   FaHotel,
   FaDonate,
   FaPhone,
-  FaHandPaper
+  FaHandPaper,
+  FaCloud
 } from "react-icons/fa";
 import styled from "styled-components";
 
@@ -69,6 +70,9 @@ function Footer() {
         </SocialIconLink>
         <SocialIconLink href="/emer">
           <FaPhone />
+        </SocialIconLink>
+        <SocialIconLink href="/weath">
+          <FaCloud />
         </SocialIconLink>
         <SocialIconLink href="/Notify">
           <FaHandPaper />
