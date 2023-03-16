@@ -15,7 +15,7 @@ const CommunityPage = () => {
     <div className="App">
       <Navbar/>
     <ChatEngine
-      height="82vh"
+      height="83vh"
       projectID={projectID}
       userName={localStorage.getItem('username')}
       userSecret={localStorage.getItem('password')}
