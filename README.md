@@ -67,9 +67,11 @@ For more information, visit https://www.gnu.org/licenses/gpl-3.0 or see included
 If you wish to build this project you should make your own firebase project, and use your own firebase json. The project should be on the blaze plan, and have a realtime database, cloud functions, storage and authentication enabled.
 .
 In the project directory, install the dependencies and library:
+
 ```npm install```
 
 After that, run the project:
+
 ```npm start```
 
 Runs the app in the development mode.
@@ -77,10 +79,12 @@ Open http://localhost:3000 to view it in your browser.
 
 The page will reload when you make changes.
 You may also see any lint errors in the console.
+
 ```npm test```
 
 Launches the test runner in the interactive watch mode.
 See the section about running tests for more information.
+
 ```npm run build```
 
 ## Distribution 📦
