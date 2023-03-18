@@ -10,10 +10,12 @@ GDSC Solution Challenge 2023
 
 ##### Web app developed for GDSC solution challenge 2023  , that aims to focuses on building resilient communities that are prepared to withstand and recover from natural disasters
 
-It helps to achieve United Nation Sustainable Development Goals 13 
+It helps to achieve United Nation Sustainable Development Goals 1,11  and 13 
 
 Target 13.1: [Strengthen resilience and adaptive capacity to climate-related disasters](https://sdg-tracker.org/climate-change)
+
 Target 11.5: [Reduce the Adverse Effects of Natural Disasters](https://sdg-tracker.org/cities)
+
 Target 1.5:  [Build resilience to environmental, economic and social disasters](https://sdg-tracker.org/no-poverty)
 
 ## Google Technologies Used
