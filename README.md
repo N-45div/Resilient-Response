@@ -10,7 +10,7 @@ GDSC Solution Challenge 2023
 
 ##### Web app developed for GDSC solution challenge 2023  , that aims to focuses on building resilient communities that are prepared to withstand and recover from natural disasters
 
-It helps to achieve United Nation Sustainable Development Goals 13 Target 13.1: [Strengthen resilience and adaptive capacity to climate-related disasters]()
+It helps to achieve United Nation Sustainable Development Goals 13 Target 13.1: [Strengthen resilience and adaptive capacity to climate-related disasters](https://sdg-tracker.org/climate-change)
 
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
@@ -19,10 +19,6 @@ Distributed under the GNU GPL v3 license.
 For more information, visit https://www.gnu.org/licenses/gpl-3.0 or see included file LICENSE
 
 ## Google Technologies Used
-- Google Mobile Services
-    - Mobile Vision SDK
-    - Tasks
-- Gson
 - Guava
 - Google Maps Platform
     - Maps SDK for Android
@@ -34,14 +30,12 @@ For more information, visit https://www.gnu.org/licenses/gpl-3.0 or see included
     - Cloud Functions
 
 ## Other Libraries:
-- CircleImageView by [@hdodenhof](https://github.com/hdodenhof/CircleImageView)
 - LeafletJS
 - Maptiler
 - TensorflowJS
 
 ## ❇️ Application Features ❇️:
     ✅ Provides track of who has signed up and to contact them in case of an emergency
-    ✅ Get alerted for emergency blood needed!
     ✅ Sharing of information related to disasters and emergency preparedness
     ✅ Connect with others in their area who are also using the app
     ✅ Level up and get recognized in the community!
