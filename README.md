@@ -1,7 +1,7 @@
 # Resilient Response
 GDSC Solution Challenge 2023
 
-<img src="https://i.ibb.co/fvRxNz7/firebase.png" width="100"/> <img src="https://i.ibb.co/cDcmtvB/React-JS-logo.png" width="100"/>  <img src="https://i.ibb.co/wgcWYt2/tensorflow-ar21.png" width="100"> <img src="https://i.ibb.co/Php67Qp/leafletjs-ar21.png" width="100">
+<img src="https://i.ibb.co/fvRxNz7/firebase.png" width="100"/>    <img src="https://i.ibb.co/wgcWYt2/tensorflow-ar21.png" width="100">
 
 ![](https://i.ibb.co/N6F9D8P/banner.png)
 
@@ -10,19 +10,17 @@ GDSC Solution Challenge 2023
 
 ##### Web app developed for GDSC solution challenge 2023  , that aims to focuses on building resilient communities that are prepared to withstand and recover from natural disasters
 
-It helps to achieve United Nation Sustainable Development Goals 13 Target 13.1: [Strengthen resilience and adaptive capacity to climate-related disasters](https://sdg-tracker.org/climate-change)
+It helps to achieve United Nation Sustainable Development Goals 13 
 
-
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-
-Distributed under the GNU GPL v3 license.
-For more information, visit https://www.gnu.org/licenses/gpl-3.0 or see included file LICENSE
+Target 13.1: [Strengthen resilience and adaptive capacity to climate-related disasters](https://sdg-tracker.org/climate-change)
+Target 11.5: [Reduce the Adverse Effects of Natural Disasters](https://sdg-tracker.org/cities)
+Target 1.5:  [Build resilience to environmental, economic and social disasters](https://sdg-tracker.org/no-poverty)
 
 ## Google Technologies Used
-- Guava
-- Google Maps Platform
-    - Maps SDK for Android
-    - Geocoding API
+- Tensorflow
+    - TensorflowJS
+    - @tensorflow/tfjs
+    - @tensorflow-models/handpose
 - Google Firebase
     - Realtime Database
     - Authentication
@@ -32,15 +30,12 @@ For more information, visit https://www.gnu.org/licenses/gpl-3.0 or see included
 ## Other Libraries:
 - LeafletJS
 - Maptiler
-- TensorflowJS
 
 ## ❇️ Application Features ❇️:
     ✅ Provides track of who has signed up and to contact them in case of an emergency
-    ✅ Sharing of information related to disasters and emergency preparedness
-    ✅ Connect with others in their area who are also using the app
-    ✅ Enables users to organize and collaborate with each other during an emergency through community feature
+    ✅ Sharing of information related to disasters and emergency preparedness 
+    ✅ Enables users to organize and collaborate with each other during an emergency
     ✅ Provides a map of nearby emergency shelters that users can go to during a disaster
-    ✅ Enables users to check in and out of shelters to help emergency responders keep track of who is where
     ✅ Donate disaster gift boxes to those in need during and after a disaster
     ✅ Provides a list of emergency contacts that users can call or message during an emergency
     ✅ Provides real-time weather updates and alerts
@@ -60,7 +55,7 @@ If you wish to build this project you should make your own firebase project, and
 .
 In the project directory, install the dependencies and library:
 
-```npm install```
+```npm install --legacy-peer-deps```
 
 After that, run the project:
 
@@ -78,8 +73,6 @@ Launches the test runner in the interactive watch mode.
 See the section about running tests for more information.
 
 ```npm run build```
-
-## Distribution 📦
 
 
 ## Authors 📃
