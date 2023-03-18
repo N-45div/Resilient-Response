@@ -1,7 +1,7 @@
 # Resilient Response
 GDSC Solution Challenge 2023
 
-<img src="https://i.ibb.co/fvRxNz7/firebase.png" width="100"/>    <img src="https://i.ibb.co/wgcWYt2/tensorflow-ar21.png" width="100">
+<img src="https://i.ibb.co/fvRxNz7/firebase.png" width="175"/> <img src="https://i.ibb.co/wgcWYt2/tensorflow-ar21.png" width="175">
 
 ![](https://i.ibb.co/N6F9D8P/banner.png)
 
