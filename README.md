@@ -8,7 +8,7 @@ GDSC Solution Challenge 2023
 [Our video presentation](https://www.youtube.com/watch?v=LK_cRpyMtHs)  &emsp; [Live Demo](https://gdsc-23.vercel.app/)
 
 
-##### Web app developed for GDSC solution challenge 2023  , that aims to focuses on building resilient communities that are prepared to withstand and recover from natural disasters
+##### Our team is excited to announce the development of a cutting-edge web application both for mobile and desktop for the GDSC Solution Challenge 2023. With a mission to empower communities to withstand and recover from natural disasters, our app focuses on building resilience through innovative technology.We believe that by harnessing the power of technology, we can build stronger, more resilient communities and help protect our planet for future generations.
 
 It helps to achieve United Nation Sustainable Development Goals 1,11  and 13 
 
