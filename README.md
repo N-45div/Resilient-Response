@@ -5,7 +5,7 @@ GDSC Solution Challenge 2023
 
 ![](https://i.ibb.co/N6F9D8P/banner.png)
 
-[Our video presentation](https://www.youtube.com/watch?v=LK_cRpyMtHs)
+[Our video presentation](https://www.youtube.com/watch?v=LK_cRpyMtHs)   [Live Demo](https://gdsc-23.vercel.app/)
 
 
 ##### Web app developed for GDSC solution challenge 2023  , that aims to focuses on building resilient communities that are prepared to withstand and recover from natural disasters
