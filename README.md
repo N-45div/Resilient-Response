@@ -38,16 +38,14 @@ For more information, visit https://www.gnu.org/licenses/gpl-3.0 or see included
     ✅ Provides track of who has signed up and to contact them in case of an emergency
     ✅ Sharing of information related to disasters and emergency preparedness
     ✅ Connect with others in their area who are also using the app
-    ✅ Level up and get recognized in the community!
-    ✅ See all current running emergencies and with a click of a button navigate to them!
-    ✅ Enables users to organize and collaborate with each other during an emergency
+    ✅ Enables users to organize and collaborate with each other during an emergency through community feature
     ✅ Provides a map of nearby emergency shelters that users can go to during a disaster
     ✅ Enables users to check in and out of shelters to help emergency responders keep track of who is where
     ✅ Donate disaster gift boxes to those in need during and after a disaster
     ✅ Provides a list of emergency contacts that users can call or message during an emergency
     ✅ Provides real-time weather updates and alerts
     ✅ Users can use computer vision technology to detect hand gestures and poses.
-    ✅ Enables users to track weather patterns and plan accordingly
+    
   
 ## Screenshots📷
 |       **Main Page**                |              **Signup Page**       |        **Chat Login**                     |            **Community Chat**        |
