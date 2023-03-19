@@ -87,7 +87,10 @@ const AnimatedImage = styled.img`
 
 const EarthyBackground = styled.div`
   background-color: #0B3861;
+  height: 100vh;
+  width: 100%;
 `;
+
 
 const Home = () => {
   const [typingIndex, setTypingIndex] = useState(0);
