@@ -32,6 +32,7 @@ const FooterContainer = styled.footer`
 const SocialLinks = styled.div`
   display: flex;
   align-items: center;
+  margin: 0 auto;
 
   @media only screen and (max-width: 768px) {
     margin-top: 10px;
