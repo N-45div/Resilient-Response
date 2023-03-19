@@ -104,7 +104,7 @@ function App1() {
           onClick={handleCameraFlip}
           style={{
             position: "absolute",
-            bottom: 100,
+            bottom: -580,
             left: "50%",
             transform: "translateX(-50%)",
             zIndex: 10,
