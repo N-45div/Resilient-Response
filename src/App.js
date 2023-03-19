@@ -3,7 +3,6 @@ import "./App.css";
 import Home from "./Home";
 import App1 from "./Notify";
 import CommunityPage from "./community";
-import QRGenerator from "./Safety";
 import Donation from "./Donation";
 import MarkerMap from "./MarkerMap";
 import EmergencyContacts from "./emer";
@@ -18,7 +17,6 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/Home" element={<Home />} />
         <Route path="/Notify" element={<App1 />} />
-        <Route path="/Safety" element={<QRGenerator />} />
         <Route path="/Donation" element={<Donation />} />
         <Route path="/MarkerMap" element={<MarkerMap />} />
         <Route path="/emer" element={<EmergencyContacts />} />
