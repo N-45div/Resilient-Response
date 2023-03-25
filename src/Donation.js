@@ -59,6 +59,11 @@ const DonationButton = styled(Button)`
 const DonateWithoutMoneyContainer = styled.div`
   margin-top: 1rem;
   font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 `;
 
 const GiftBoxContainer = styled.div`
