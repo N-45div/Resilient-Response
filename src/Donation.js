@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Button } from 'react-bootstrap';
-import { FaDonate } from 'react-icons/fa';
+import { FaBox, FaDonate } from 'react-icons/fa';
 import styled from 'styled-components';
 import Navbar from './components/Nav/Navbar';
 import Footer from './Footer';
@@ -11,6 +11,15 @@ const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+`;
+
+const HeaderContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #3c64b1;
+  color: #fff;
 `;
 
 const ContentContainer = styled(Container)`
@@ -39,8 +48,17 @@ const InputField = styled.input`
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 `;
 
-const DonateButton = styled(Button)`
+const DonationButton = styled(Button)`
+  background-color: #3c64b1;
+  border: none;
+  &:hover {
+    background-color: #2c4681;
+  }
+`;
+
+const DonateWithoutMoneyContainer = styled.div`
   margin-top: 1rem;
+  font-size: 0.8rem;
 `;
 
 const GiftBoxContainer = styled.div`
@@ -70,51 +88,42 @@ const GiftBoxImage = styled.img`
 const DisasterGiftBoxPage = () => {
   return (
     <div className="App">
-      <Navbar />
-      <MainContainer>
-        <h1 style={{ color: "#1a2a6c" }}>Disaster Gift Box Donation</h1>
-        <ContentContainer>
+     <Navbar/>
+     <MainContainer>
+     <h1 style={{ color: "#1a2a6c" }}>Disaster Gift Box Donation</h1>
+      <ContentContainer>
           <h3>Choose a Gift Box to Donate</h3>
-          <p>
-            Each gift box contains essential items that will help disaster
-            survivors get through the toughest times.
-          </p>
+          <p>Each gift box contains essential items that will help disaster survivors get through the toughest times.</p>
           <GiftBoxContainer>
             <GiftBoxItem>
-              <GiftBoxImage src={image} alt="Gift Box 1" />
+              <GiftBoxImage src= {image} alt="Gift Box 1" />
               <h4>Food and Water Box</h4>
               <p>This box contains non-perishable food items and bottled water.</p>
-              <DonateButton variant="secondary" type="submit">
-                <FaDonate /> Donate Now
-              </DonateButton>
+              <DonationButton>Donate Now</DonationButton>
             </GiftBoxItem>
             <GiftBoxItem>
               <GiftBoxImage src={image} alt="Gift Box 2" />
               <h4>Clothing Box</h4>
               <p>This box contains new or gently used clothing items and blankets.</p>
-              <DonateButton variant="secondary" type="submit">
-                <FaDonate /> Donate Now
-              </DonateButton>
+              <DonationButton>Donate Now</DonationButton>
             </GiftBoxItem>
           </GiftBoxContainer>
-          <FormContainer>
+        <FormContainer>
             <h3>Donate Without Money</h3>
             <InputField type="text" placeholder="Your Name" />
             <InputField type="email" placeholder="Your Email" />
-            <InputField type="tel" placeholder="Your Phone Number" />
-            <InputField type="text" placeholder="Item you want to donate" />
-            <InputField type="text" placeholder="Quantity" />
-            <DonateButton variant="secondary" type="submit">
-              Donate Now
-            </DonateButton>
-          </FormContainer>
-    </ContentContainer>
-    <Footer />
-  </MainContainer>
-  <Footer/>
-</div>
-
-
+            <InputField type="text" placeholder="Your Address" />
+            <DonateWithoutMoneyContainer>
+              <p>If you don't have money to donate, you can still help by volunteering or spreading awareness about the disaster.</p>
+              <p>For more information, visit our website.</p>
+              <Button variant="secondary" type="submit">
+              <FaDonate /> Donate Without Money</Button>
+            </DonateWithoutMoneyContainer>
+        </FormContainer>
+      </ContentContainer>
+    </MainContainer>
+    <Footer/>
+  </div>
   );
 };
 
