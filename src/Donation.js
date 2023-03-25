@@ -117,8 +117,6 @@ const DisasterGiftBoxPage = () => {
               <p>If you don't have money to donate, you can still help by volunteering or spreading awareness about the disaster.</p>
               <p>For more information, visit our website.</p>
             </DonateWithoutMoneyContainer>
-          <Button variant="secondary" type="submit">
-          <FaDonate /> Donate Without Money</Button>
         </FormContainer>
       </ContentContainer>
     </MainContainer>
