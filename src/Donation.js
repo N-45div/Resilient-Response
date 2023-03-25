@@ -13,7 +13,6 @@ const MainContainer = styled.div`
   justify-content: space-between;
 `;
 
-
 const ContentContainer = styled(Container)`
   padding: 2rem 2rem 4rem;
   display: flex;
@@ -40,10 +39,8 @@ const InputField = styled.input`
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 `;
 
-
-const DonateWithoutMoneyContainer = styled.div`
+const DonateButton = styled(Button)`
   margin-top: 1rem;
-  font-size: 0.8rem;
 `;
 
 const GiftBoxContainer = styled.div`
@@ -73,44 +70,51 @@ const GiftBoxImage = styled.img`
 const DisasterGiftBoxPage = () => {
   return (
     <div className="App">
-     <Navbar/>
-     <MainContainer>
-     <h1 style={{ color: "#1a2a6c" }}>Disaster Gift Box Donation</h1>
-      <ContentContainer>
+      <Navbar />
+      <MainContainer>
+        <h1 style={{ color: "#1a2a6c" }}>Disaster Gift Box Donation</h1>
+        <ContentContainer>
           <h3>Choose a Gift Box to Donate</h3>
-          <p>Each gift box contains essential items that will help disaster survivors get through the toughest times.</p>
+          <p>
+            Each gift box contains essential items that will help disaster
+            survivors get through the toughest times.
+          </p>
           <GiftBoxContainer>
             <GiftBoxItem>
-              <GiftBoxImage src= {image} alt="Gift Box 1" />
+              <GiftBoxImage src={image} alt="Gift Box 1" />
               <h4>Food and Water Box</h4>
               <p>This box contains non-perishable food items and bottled water.</p>
-              <Button variant="secondary" type="submit">
-              <FaDonate /> Donate Now</Button>
+              <DonateButton variant="secondary" type="submit">
+                <FaDonate /> Donate Now
+              </DonateButton>
             </GiftBoxItem>
             <GiftBoxItem>
               <GiftBoxImage src={image} alt="Gift Box 2" />
               <h4>Clothing Box</h4>
               <p>This box contains new or gently used clothing items and blankets.</p>
-              <Button variant="secondary" type="submit">
-              <FaDonate /> Donate Now</Button>
+              <DonateButton variant="secondary" type="submit">
+                <FaDonate /> Donate Now
+              </DonateButton>
             </GiftBoxItem>
           </GiftBoxContainer>
           <FormContainer>
             <h3>Donate Without Money</h3>
             <InputField type="text" placeholder="Your Name" />
             <InputField type="email" placeholder="Your Email" />
-            <InputField type="text" placeholder="Your Address" />
-            <DonateWithoutMoneyContainer>
-              <p>If you don't have money to donate, you can still help by volunteering or spreading awareness about the disaster.</p>
-              <p>For more information, visit our website.</p>
-              <Button variant="secondary" type="submit">
-              <FaDonate /> Donate Without Money</Button>
-            </DonateWithoutMoneyContainer>
+            <InputField type="tel" placeholder="Your Phone Number" />
+            <InputField type="text" placeholder="Item you want to donate" />
+            <InputField type="text" placeholder="Quantity" />
+            <DonateButton variant="secondary" type="submit">
+              Donate Now
+            </DonateButton>
           </FormContainer>
-      </ContentContainer>
-    </MainContainer>
-    <Footer/>
-  </div>
+    </ContentContainer>
+    <Footer />
+  </MainContainer>
+  <Footer/>
+</div>
+
+
   );
 };
 
