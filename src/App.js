@@ -3,7 +3,7 @@ import "./App.css";
 import Home from "./Home";
 import App1 from "./Notify";
 import CommunityPage from "./community";
-import Donation from "./Donation";
+import DisasterGiftBoxPage from "./Donation";
 import MarkerMap from "./MarkerMap";
 import EmergencyContacts from "./emer";
 import SignIn from "./components/Nav/SignIn";
@@ -17,7 +17,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/Home" element={<Home />} />
         <Route path="/Notify" element={<App1 />} />
-        <Route path="/Donation" element={<Donation />} />
+        <Route path="/Donation" element={<DisasterGiftBoxPage />} />
         <Route path="/MarkerMap" element={<MarkerMap />} />
         <Route path="/emer" element={<EmergencyContacts />} />
         <Route path="/community" element={<CommunityPage />} />
