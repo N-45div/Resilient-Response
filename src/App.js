@@ -7,14 +7,14 @@ import DisasterGiftBoxPage from "./Donation";
 import MarkerMap from "./MarkerMap";
 import EmergencyContacts from "./emer";
 import SignIn from "./components/Nav/SignIn";
-import HomePage from "./openpg";
+//import HomePage from "./openpg";
 import WeatherApp from "./weath";
 
 function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        //<Route path="/" element={<HomePage />} />
         <Route path="/Home" element={<Home />} />
         <Route path="/Notify" element={<App1 />} />
         <Route path="/Donation" element={<DisasterGiftBoxPage />} />
