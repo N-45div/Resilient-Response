@@ -102,17 +102,17 @@ const DisasterGiftBoxPage = () => {
               <DonationButton>Donate Now</DonationButton>
             </GiftBoxItem>
             <GiftBoxItem>
-              <GiftBoxImage src={image} alt="Gift Box 2" />
-              <h4>Clothing Box</h4>
-              <p>This box contains new or gently used clothing items and blankets.</p>
-              <DonationButton>Donate Now</DonationButton>
-              </GiftBoxItem>
+               <GiftBoxImage src={image} alt="Gift Box 2" />
+               <h4>Clothing Box</h4>
+               <p>This box contains new or gently used clothing items and blankets.</p>
+               <DonationButton>Donate Now</DonationButton>
+            </GiftBoxItem>
           </GiftBoxContainer>
         <FormContainer>
             <h3>Donate Without Money</h3>
-                <InputField type="text" placeholder="Your Name" />
-                <InputField type="email" placeholder="Your Email" />
-                <InputField type="text" placeholder="Your Address" />
+            <InputField type="text" placeholder="Your Name" />
+            <InputField type="email" placeholder="Your Email" />
+            <InputField type="text" placeholder="Your Address" />
             <DonateWithoutMoneyContainer>
               <p>If you don't have money to donate, you can still help by volunteering or spreading awareness about the disaster.</p>
               <p>For more information, visit our website.</p>
