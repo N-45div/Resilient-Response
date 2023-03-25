@@ -99,14 +99,14 @@ const DisasterGiftBoxPage = () => {
             <GiftBoxImage src= {image} alt="Gift Box 1" />
             <h4>Food and Water Box</h4>
             <p>This box contains non-perishable food items and bottled water.</p>
-            <DonationButton>Donate Now</DonationButton>
           </GiftBoxItem>
+             <DonationButton>Donate Now</DonationButton>
           <GiftBoxItem>
             <GiftBoxImage src={image} alt="Gift Box 2" />
             <h4>Clothing Box</h4>
             <p>This box contains new or gently used clothing items and blankets.</p>
-            <DonationButton>Donate Now</DonationButton>
-            </GiftBoxItem>
+          </GiftBoxItem>
+             <DonationButton>Donate Now</DonationButton>
 </GiftBoxContainer>
 <FormContainer>
 <h3>Donate Without Money</h3>
