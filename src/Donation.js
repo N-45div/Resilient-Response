@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Button } from 'react-bootstrap';
-import { FaBox, FaDonate } from 'react-icons/fa';
+import { FaDonate } from 'react-icons/fa';
 import styled from 'styled-components';
 import Navbar from './components/Nav/Navbar';
 import Footer from './Footer';
@@ -13,14 +13,6 @@ const MainContainer = styled.div`
   justify-content: space-between;
 `;
 
-const HeaderContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 2rem;
-  background-color: #3c64b1;
-  color: #fff;
-`;
 
 const ContentContainer = styled(Container)`
   padding: 2rem 2rem 4rem;
@@ -48,13 +40,6 @@ const InputField = styled.input`
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 `;
 
-const DonationButton = styled(Button)`
-  background-color: #3c64b1;
-  border: none;
-  &:hover {
-    background-color: #2c4681;
-  }
-`;
 
 const DonateWithoutMoneyContainer = styled.div`
   margin-top: 1rem;
@@ -99,13 +84,15 @@ const DisasterGiftBoxPage = () => {
               <GiftBoxImage src= {image} alt="Gift Box 1" />
               <h4>Food and Water Box</h4>
               <p>This box contains non-perishable food items and bottled water.</p>
-              <DonationButton>Donate Now</DonationButton>
+              <Button variant="secondary" type="submit">
+              <FaDonate /> Donate Now</Button>
             </GiftBoxItem>
             <GiftBoxItem>
               <GiftBoxImage src={image} alt="Gift Box 2" />
               <h4>Clothing Box</h4>
               <p>This box contains new or gently used clothing items and blankets.</p>
-              <DonationButton>Donate Now</DonationButton>
+              <Button variant="secondary" type="submit">
+              <FaDonate /> Donate Now</Button>
             </GiftBoxItem>
           </GiftBoxContainer>
           <FormContainer>
