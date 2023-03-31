@@ -5,7 +5,7 @@ GDSC Solution Challenge 2023
 
 ![](https://i.ibb.co/N6F9D8P/banner.png)
 
-&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; [Our video presentation](https://www.youtube.com/watch?v=a0wbma13RkM) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; [Live Demo](https://resilient-response.vercel.app/)
+&nbsp;[Our video presentation](https://www.youtube.com/watch?v=a0wbma13RkM)    &emsp;    [Live Demo](https://resilient-response.vercel.app/)
 
 
 ##### Our team is excited to announce the development of a cutting-edge web application both for mobile and desktop for the GDSC Solution Challenge 2023. With a mission to empower communities to withstand and recover from natural disasters, our app focuses on building resilience through innovative technology.We believe that by harnessing the power of technology, we can build stronger, more resilient communities and help protect our planet for future generations.
