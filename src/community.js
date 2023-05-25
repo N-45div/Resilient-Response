@@ -6,7 +6,7 @@ import Footer from './Footer';
 
 import './style.css';
 
-const projectID = '72d8d715-2e67-475d-8f2f-8b0929b92971';
+const projectID = '';
 
 const CommunityPage = () => {
   if (!localStorage.getItem('username')) return <LoginForm />;
