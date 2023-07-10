@@ -75,7 +75,7 @@ const HomePage = () => {
             className="mx-auto btn-grey"
             onClick={handleClick}
           >
-            LogIn with Gmail
+            SignIn with Google
           </StyledButton>
         </Col>
       </Row>
