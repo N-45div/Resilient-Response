@@ -26,11 +26,11 @@ const MarkersMap = () => {
     <div className="App">
       <Navbar/>
       <>
-        <div className="row mb-3">
-          <div className="col text-center">
+        <div className="mb-3">
+          <div className="text-center">
             <h1 style={{ color: "#1a2a6c" }}>Emergency Shelters</h1>
             <p style={{ color: "#1a2a6c" }}>Nearest Disaster Shelters in case of Emergency</p>
-            <div className="col">
+            <div>
               <Map center={center} zoom={ZOOM_LEVEL} ref={mapRef} style={{ height: "70vh" }}>
                 <TileLayer
                   url={osm.maptiler.url}
