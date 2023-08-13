@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Button } from 'react-bootstrap';
-import { FaBox, FaDonate } from 'react-icons/fa';
+import { FaDonate } from 'react-icons/fa';
 import styled from 'styled-components';
 import Navbar from './components/Nav/Navbar';
 import Footer from './Footer';
@@ -11,15 +11,6 @@ const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-`;
-
-const HeaderContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 2rem;
-  background-color: #3c64b1;
-  color: #fff;
 `;
 
 const ContentContainer = styled(Container)`

@@ -46,26 +46,6 @@ const BannerDescription = styled.p`
   }
 `;
 
-const BannerButton = styled.a`
-  background-color: #4f46e5;
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 600;
-  text-decoration: none;
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
-
-  &:hover {
-    background-color: #4338ca;
-  }
-
-  @media (max-width: 768px) {
-    font-size: 0.9rem;
-    text-align: center;
-  }
-`;
-
 const upAndDown = keyframes`
   0% {
     transform: translateY(0);
