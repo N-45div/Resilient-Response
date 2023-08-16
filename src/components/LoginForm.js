@@ -3,7 +3,7 @@ import Footer from '../Footer';
 import Navbar from './Nav/Navbar';
 
 
-const projectID = '72d8d715-2e67-475d-8f2f-8b0929b92971';
+const projectID = 'use your own API key'; //Subject to improve and move on from api to a full fledged dynamic and robust community
 
 const LoginForm = () => {
   const [username, setUsername] = useState('');
