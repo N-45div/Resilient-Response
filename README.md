@@ -1,5 +1,6 @@
 # Resilient Response
-GDSC Solution Challenge 2023
+Resilient Response is a web application developed to foster connectivity and provide vital information during periods of crisis. This application was conceived as part of the 2023 Solution Challenge, which aligns with the overarching mission to address the United Nations' 17 Sustainable Development Goals by leveraging Google technology. The Resilient Response web app offers users the ability to register and access chat interfaces to stay informed about events occurring in their geographic area. In addition to real-time weather updates, the application also displays the locations of available shelters during times of emergency.
+
 
 <img src="https://i.ibb.co/fvRxNz7/firebase.png" width="175"/> <img src="https://i.ibb.co/wgcWYt2/tensorflow-ar21.png" width="175">
 
