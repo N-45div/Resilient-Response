@@ -9,22 +9,24 @@ Resilient Response is a web application developed to foster connectivity and pro
 &nbsp;[Our video presentation](https://www.youtube.com/watch?v=a0wbma13RkM)    &emsp;    [Live Demo](https://resilient-response.vercel.app/)
 
 
-##### Our team is excited to announce the development of a cutting-edge web application both for mobile and desktop for the GDSC Solution Challenge 2023. With a mission to empower communities to withstand and recover from natural disasters, our app focuses on building resilience through innovative technology.We believe that by harnessing the power of technology, we can build stronger, more resilient communities and help protect our planet for future generations.
+**Our team is excited to announce the development of a cutting-edge web application both for mobile and desktop for the GDSC Solution Challenge 2023. With a mission to empower communities to withstand and recover from natural disasters, our app focuses on building resilience through innovative technology.We believe that by harnessing the power of technology, we can build stronger, more resilient communities and help protect our planet for future generations.**
 
-It helps to achieve United Nation Sustainable Development Goals 1,11  and 13 
+It helps to achieve **United Nation Sustainable Development Goals 1,11  and 13** 
 
-Target 1.5:  [Build resilience to environmental, economic and social disasters](https://sdg-tracker.org/no-poverty)
+**Target 1.5:**  [Build resilience to environmental, economic and social disasters](https://sdg-tracker.org/no-poverty) 🔨
 
-Target 11.5: [Reduce the Adverse Effects of Natural Disasters](https://sdg-tracker.org/cities)
+**Target 11.5:** [Reduce the Adverse Effects of Natural Disasters](https://sdg-tracker.org/cities) ⬇️
 
-Target 13.1: [Strengthen resilience and adaptive capacity to climate-related disasters](https://sdg-tracker.org/climate-change)
+**Target 13.1:** [Strengthen resilience and adaptive capacity to climate-related disasters](https://sdg-tracker.org/climate-change) 💪
 
 ## Google Technologies Used
-- Tensorflow
+- Tensorflow  ![download](https://github.com/kaushalkumar99/Resilient-Response/assets/44024381/0026a330-4eb9-4b11-b491-a5a1ac1c3d9a)
+
     - TensorflowJS
     - @tensorflow/tfjs
     - @tensorflow-models/handpose
-- Google Firebase
+- Google Firebase  ![download](https://github.com/kaushalkumar99/Resilient-Response/assets/44024381/4eed5742-c21a-40aa-84ae-5a8b138254aa)
+
     - Realtime Database
     - Authentication
     - Cloud Messaging
