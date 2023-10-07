@@ -20,7 +20,7 @@ function SignIn() {
       {value ? (
         <Home />
       ) : (
-        <button onClick={handleClick}> SignIn with Google</button>
+        <button onClick={handleClick}> Sign In with Google</button>
       )}
     </div>
   );
