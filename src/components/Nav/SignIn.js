@@ -3,7 +3,7 @@ import { auth, provider } from "./config";
 import { signInWithPopup } from "firebase/auth";
 import Home from "../../Home";
 
-function SignIn() {
+function Sign In() {
   const [value, setValue] = useState("");
   const handleClick = () => {
     signInWithPopup(auth, provider).then((data) => {
@@ -20,10 +20,10 @@ function SignIn() {
       {value ? (
         <Home />
       ) : (
-        <button onClick={handleClick}> SignIn with Google</button>
+        <button onClick={handleClick}> Sign In with Google</button>
       )}
     </div>
   );
 }
 
-export default SignIn;
+export default Sign In;
