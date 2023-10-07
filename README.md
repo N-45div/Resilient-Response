@@ -2,9 +2,9 @@
 Resilient Response is a web application developed to foster connectivity and provide vital information during periods of crisis. This application was conceived as part of the 2023 Solution Challenge, which aligns with the overarching mission to address the United Nations' 17 Sustainable Development Goals by leveraging Google technology. The Resilient Response web app offers users the ability to register and access chat interfaces to stay informed about events occurring in their geographic area. In addition to real-time weather updates, the application also displays the locations of available shelters during times of emergency.
 
 
-<img src="https://i.ibb.co/fvRxNz7/firebase.png" width="175"/> <img src="https://i.ibb.co/wgcWYt2/tensorflow-ar21.png" width="175">
+<img src="public/firebase.png" width="175"/> <img src="public/tensorflow-ar21.png" width="175">
 
-![](https://i.ibb.co/N6F9D8P/banner.png)
+![](public/banner.png)
 
 &nbsp;[Our video presentation](https://www.youtube.com/watch?v=a0wbma13RkM)    &emsp;    [Live Demo](https://resilient-response.vercel.app/)
 
@@ -20,12 +20,12 @@ It helps to achieve **United Nation Sustainable Development Goals 1,11  and 13**
 **Target 13.1:** [Strengthen resilience and adaptive capacity to climate-related disasters](https://sdg-tracker.org/climate-change) 💪
 
 ## Google Technologies Used
-- Tensorflow  ![download](https://github.com/kaushalkumar99/Resilient-Response/assets/44024381/0026a330-4eb9-4b11-b491-a5a1ac1c3d9a)
+- Tensorflow <img src="public/tensorflow-logo.png" width="15">
 
     - TensorflowJS
     - @tensorflow/tfjs
     - @tensorflow-models/handpose
-- Google Firebase  ![download](https://github.com/kaushalkumar99/Resilient-Response/assets/44024381/4eed5742-c21a-40aa-84ae-5a8b138254aa)
+- Google Firebase <img src="public/firebase-logo.png" width="18">
 
     - Realtime Database
     - Authentication
@@ -33,8 +33,8 @@ It helps to achieve **United Nation Sustainable Development Goals 1,11  and 13**
     - Cloud Functions
 
 ## Other Libraries:
-- LeafletJS
-- Maptiler
+- LeafletJS <img src="public/leaflet-logo.png" width="15">
+- Maptiler <img src="public/maptiler-logo.png" width="15">
 
 ## ❇️ Application Features ❇️:
     ✅ Provides track of who has signed up and to contact them in case of an emergency
@@ -55,12 +55,12 @@ It helps to achieve **United Nation Sustainable Development Goals 1,11  and 13**
 |![](https://i.ibb.co/k44zgyX/donation-Page.jpg)|![](https://i.ibb.co/WzBV5sD/shelter-Address.jpg)|![](https://i.ibb.co/d60km3Z/real-Time-Weather.jpg)|![](https://i.ibb.co/5MBZ8DB/hand-Detector.jpg)|
 
 
-## Build Information 🧰 
+## Let's Start Building! 🧰 
 If you wish to build this project you should make your own firebase project, and use your own firebase json. The project should be on the blaze plan, and have a realtime database, cloud functions, storage and authentication enabled.
 .
-In the project directory, install the dependencies and library:
+In the project directory, install the dependencies and library: 
 
-```npm install --legacy-peer-deps```
+```npm install --legacy-peer-deps``` <img src="public/Building.gif" width="300" align ="right">                                      
 
 After that, run the project:
 
@@ -81,6 +81,7 @@ See the section about running tests for more information.
 
 
 ## Authors 📃
-Contact Us :
-- N Divij [Github](https://github.com/N-45div) [Gmail](ndivij2004@gmail.com)
-- Vivek Yadav [Github](https://github.com/enpvivek) [Gmail](enpvivek@gmail.com)
+Contact Us💻:
+- N Divij [<img alt="alt_text" width="18px" src="public/github-logo.png" />](https://github.com/N-45div) [<img alt="alt_text" width="18px" src="public/gmail-logo.png">](ndivij2004@gmail.com)
+- Vivek Yadav [<img alt="alt_text" width="18px" src="public/github-logo.png" />](https://github.com/enpvivek) [<img alt="alt_text" width="18px" src="public/gmail-logo.png">](enpvivek@gmail.com)
+  
