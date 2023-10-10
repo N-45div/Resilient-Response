@@ -8,8 +8,7 @@ import "./style.css";
 const projectID = ""; //write the projectid of the maintainers
 
 const CommunityPage = () => {
-  if (!localStorage.getItem("username")) return <LoginForm />
-
+  if (!localStorage.getItem("username")) return <LoginForm />;
 
   return (
     <div className="App">

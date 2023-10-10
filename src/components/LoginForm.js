@@ -13,7 +13,7 @@ const LoginForm = () => {
     e.preventDefault();
 
     const authObject = {
-      'Project-ID': projectID,
+      "Project-ID": projectID,
       "User-Name": username,
       "User-Secret": password,
     };
