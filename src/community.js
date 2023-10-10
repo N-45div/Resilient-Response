@@ -5,7 +5,7 @@ import Footer from "./Footer";
 import { ChatSettingsTop } from "react-chat-engine";
 import "./style.css";
 
-const projectID = "3d323e28-72fe-4543-895a-a7edae19767a"; //write the projectid of the maintainers
+const projectID = ""; //write the projectid of the maintainers
 
 const CommunityPage = () => {
   if (!localStorage.getItem("username")) return <LoginForm />
@@ -18,10 +18,10 @@ const CommunityPage = () => {
       <ChatEngine
         height="84vh"
         projectID={projectID}
-        // userName={localStorage.getItem("username")}
-        // userSecret={localStorage.getItem("password")}
-        userName="Akangkha"
-        userSecret="Aksar2410,.;"
+        userName={localStorage.getItem("username")}
+        userSecret={localStorage.getItem("password")}
+        // userName="Akangkha"
+        // userSecret="Aksar2410,.;"
       />
 
       <Footer />

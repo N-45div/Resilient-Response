@@ -3,8 +3,7 @@ import Footer from "../Footer";
 import Navbar from "./Nav/Navbar";
 import { auth } from "./Nav/config";
 
-const projectID = "3d323e28-72fe-4543-895a-a7edae19767a"; //Subject to improve and move on from api to a full fledged dynamic and robust community
-//write the projectid of the maintainers
+const projectID = ""; //write the projectid of the maintainers
 const LoginForm = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
